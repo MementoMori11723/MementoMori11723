@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working on [Personal-ToDo](https://github.com/MementoMori11723/personal-todo.git)
 - 🌱 I’m currently learning **PHP, BunJS, Svelte**
-- 👨‍💻 All of my projects are available at [https://github.com/MementoMori11723](https://github.com/MementoMori11723)
+- 👨‍💻 All of my projects are available at [Here](https://github.com/MementoMori11723)
 - 💬 Ask me about **Svelte, Linux, JavaScript**
 
 ## 🌐 Socials

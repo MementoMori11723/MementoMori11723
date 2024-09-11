@@ -1,8 +1,4 @@
-<div style="text-align:center;">
-
 # Hi, I'm Yasasvi Gumma
-
-</div>
 
 ### 💫 About Me:
 

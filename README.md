@@ -1,4 +1,4 @@
-# [Hi, I'm Yasasvi Gumma](https://mementomori11723.github.io/MementoMori11723/)
+# [Hi, I'm Yasasvi Gumma](https://yasasvi.site/)
 
 A passionate software developer and tech enthusiast, always eager to learn and explore new technologies. With a keen interest in full-stack development, I’ve worked on a range of projects from different tech stack applications to blockchain-based systems. I love solving challenging problems and am constantly on the lookout for collaborative open-source work.
 

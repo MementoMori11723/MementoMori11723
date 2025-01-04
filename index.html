@@ -1,62 +1,199 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Yasasvi - Developer, Fullstack, Go, Anime Enthusiast"
-    />
-    <meta
-      name="keywords"
-      content="Yasasvi, Developer, Golang, Fullstack, Anime, Nature, Food"
-    />
-    <meta name="author" content="Yasasvi - MementoMori11723" />
-    <meta name="robots" content="noindex, nofollow" />
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
-    <title>Yasasvi | MementoMori11723</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        background-color: #ffffff;
-      }
 
-      .button {
-        background-color: #1d4ed8;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Yasasvi - Developer, Fullstack, Go, Anime Enthusiast" />
+  <meta name="keywords" content="Yasasvi, Developer, Golang, Fullstack, Anime, Nature, Food" />
+  <meta name="author" content="Yasasvi - MementoMori11723" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+  <title>Yasasvi | MementoMori11723</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
 
-      .button:hover {
-        background-color: #2563eb;
-      }
+<body class="bg-[#121212] text-[#FFFFFF] font-source-code-pro">
+  <!-- Navbar -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 w-full bg-transparent text-[#FFFFFF] flex justify-between items-center p-5 z-10 transition-all duration-500 ease-in-out opacity-50">
+    <div class="text-xl font-semibold">Yasasvi Gumma</div>
+    <div class="flex space-x-6">
+      <a href="#home" class="nav-link text-[#f0f0f0] font-bold">Home</a>
+      <a href="#skills" class="nav-link text-[#f0f0f0] font-bold">Skills</a>
+      <a href="#experience" class="nav-link text-[#f0f0f0] font-bold">Experience</a>
+      <a href="#contact" class="nav-link text-[#f0f0f0] font-bold">Contact</a>
+    </div>
+  </nav>
 
-      .subtle-border {
-        border: 1px solid #e5e7eb;
-      }
-    </style>
-  </head>
+  <script>
+    // Navbar Scroll Effect
+    window.onscroll = function () {
+      changeNavbar();
+    };
 
-  <body class="min-h-screen flex items-center justify-center font-sans">
-    <div
-      class="bg-white p-8 rounded-lg shadow-lg subtle-border text-center max-w-lg mx-auto"
-    >
-      <h1 class="text-4xl font-bold mb-4 text-gray-800">
-        Still working on it...
-      </h1>
-      <p class="text-lg text-gray-600 mb-6">
-        Our site is under development. Stay tuned, we'll be back soon!
+    function changeNavbar() {
+      let navbar = document.getElementById("navbar");
+      let opacity = Math.min(0.5 + window.scrollY / 500, 1);
+      navbar.style.opacity = opacity;
+      if (window.scrollY > 100) {
+        navbar.classList.add("bg-[#121212]");
+      } else {
+        navbar.classList.remove("bg-[#121212]");
+      }
+    }
+
+    // Navbar Link Hover Effect
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        link.style.color = "#00B7A1";
+      });
+      link.addEventListener("mouseleave", () => {
+        link.style.color = "#f0f0f0";
+      });
+    });
+  </script>
+
+  <!-- Home Section -->
+  <section id="home"
+    class="hero p-10 h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-[#9B00FF] to-[#00B7A1] relative">
+    <!-- Background Shapes -->
+    <div class="absolute top-0 left-0 w-full h-full z-0">
+      <!-- Triangles with teal color placed randomly -->
+      <svg class="absolute top-0 left-0 w-full h-full">
+        <polygon points="10,10 100,100 0,100" class="fill-[#00B7A1]" opacity="0.4" />
+        <polygon points="120,50 200,150 100,200" class="fill-[#00B7A1]" opacity="0.3" />
+        <polygon points="150,30 200,100 150,150" class="fill-[#00B7A1]" opacity="0.2" />
+        <!-- More shapes with randomized positions for larger screens -->
+      </svg>
+    </div>
+    <h1 class="text-5xl font-bold text-white z-10">
+      Welcome to Yasasvi Gumma's Portfolio
+    </h1>
+    <p class="mt-4 text-lg text-[#f0f0f0] z-10">
+      Junior Developer, passionate about scalable and high-performance
+      solutions.
+    </p>
+    <a href="#contact">
+      <button class="mt-6 bg-[#9B00FF] hover:bg-[#00B7A1] text-lg px-6 py-2 rounded-full transition duration-300 z-10">
+        Let's Connect
+      </button>
+    </a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about py-20 text-center">
+    <h2 class="text-3xl font-bold text-[#9B00FF]">About Me</h2>
+    <p class="mt-4 text-lg text-[#f0f0f0]">
+      Self-taught developer with 4 years of experience building scalable,
+      high-performance web and cloud-based applications. Passionate about
+      optimizing systems and delivering optimal user experience.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[#00B7A1]">Skills</h2>
+      <p class="mt-4 text-lg text-[#f0f0f0]">
+        Technologies that I work with to build robust applications.
       </p>
-      <p class="text-sm text-gray-500">- Yasasvi (MementoMori11723)</p>
-      <div class="mt-6">
-        <a href="https://github.com/MementoMori11723" class="button">
-          GitHub
-        </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-6">
+        <div class="bg-[#1F1F1F] p-6 rounded-md">
+          <h3 class="text-xl font-semibold text-[#00B7A1]">Go</h3>
+          <p class="mt-2 text-[#f0f0f0]">
+            High-performance backend services and APIs.
+          </p>
+        </div>
+        <div class="bg-[#1F1F1F] p-6 rounded-md">
+          <h3 class="text-xl font-semibold text-[#00B7A1]">Python</h3>
+          <p class="mt-2 text-[#f0f0f0]">
+            Data science, scripting, and AI/ML development.
+          </p>
+        </div>
+        <div class="bg-[#1F1F1F] p-6 rounded-md">
+          <h3 class="text-xl font-semibold text-[#00B7A1]">JavaScript</h3>
+          <p class="mt-2 text-[#f0f0f0]">
+            Frontend development and Node.js for backend.
+          </p>
+        </div>
+        <!-- More skills can be added here -->
       </div>
     </div>
-  </body>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience bg-[#121212] py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[#9B00FF]">Experience</h2>
+      <p class="mt-4 text-lg text-[#f0f0f0]">
+        Experience in open-source contributions, web development, and
+        collaborative projects. Here are some of the highlights:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-6">
+        <div class="bg-[#1F1F1F] p-6 rounded-md">
+          <h3 class="text-xl font-semibold text-[#00B7A1]">
+            Open Source Projects
+          </h3>
+          <ul class="text-[#f0f0f0] mt-4">
+            <li>Project A - A web-based tool for automation.</li>
+            <li>Project B - A mobile app for tracking health data.</li>
+            <li>
+              Project C - A Go-based API for secure user authentication.
+            </li>
+          </ul>
+        </div>
+        <div class="bg-[#1F1F1F] p-6 rounded-md">
+          <h3 class="text-xl font-semibold text-[#00B7A1]">
+            Website for Brother's Organization
+          </h3>
+          <p class="mt-2 text-[#f0f0f0]">
+            Built a custom website for my brother's Chartered Accountant
+            business, streamlining client management and services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact py-20 text-center">
+    <h2 class="text-3xl font-bold text-[#9B00FF]">Contact</h2>
+    <p class="mt-4 text-lg text-[#f0f0f0]">
+      Feel free to reach out to me via social media or email.
+    </p>
+    <form action="https://formsubmit.co/yasasvigumma@gmail.com" method="POST" class="mt-8">
+      <input type="text" name="name" placeholder="Your Name" required
+        class="w-full p-4 mb-4 bg-[#1F1F1F] text-[#f0f0f0] border-2 border-[#00C8FF] rounded-md" />
+      <input type="email" name="email" placeholder="Your Email" required
+        class="w-full p-4 mb-4 bg-[#1F1F1F] text-[#f0f0f0] border-2 border-[#00C8FF] rounded-md" />
+      <textarea name="message" placeholder="Your Message" required
+        class="w-full p-4 mb-4 bg-[#1F1F1F] text-[#f0f0f0] border-2 border-[#00C8FF] rounded-md"></textarea>
+      <button type="submit" class="bg-[#00C8FF] hover:bg-[#1F1F1F] text-[#f0f0f0] px-6 py-3 rounded-full">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#000000] text-white py-10">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com" target="_blank" class="text-[#00B7A1] hover:text-[#9B00FF]">LinkedIn</a>
+        <a href="https://github.com" target="_blank" class="text-[#00B7A1] hover:text-[#9B00FF]">GitHub</a>
+        <a href="https://twitter.com" target="_blank" class="text-[#00B7A1] hover:text-[#9B00FF]">Twitter</a>
+      </div>
+      <p class="mt-6 text-sm text-[#f0f0f0]">
+        © 2025 Yasasvi Gumma. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>

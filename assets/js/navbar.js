@@ -6,3 +6,5 @@ document.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 });
+
+feather.replace();

@@ -121,6 +121,11 @@ nav a:hover {
   margin-top: 5px;
   padding: 8px;
   border-radius: 5px;
+  width: 30%;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
@@ -165,8 +170,87 @@ section {
 }
 
 .about-sub-tag {
-  font-size: 1.25rem;
+  font-size: 1.27rem;
   color: var(--subtxt-color);
+}
+
+#contact div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150px 70px;
+  background-color: var(--txt-color);
+  border-radius: 0.3rem;
+  padding: 2rem 3rem;
+  opacity: .9;
+}
+
+form>button {
+  font-family: "Arvo", monospace;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  width: 70%;
+  height: 3rem;
+  gap: 10px;
+}
+
+.form-input {
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+}
+
+.form-input label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--bg-color);
+  padding: 0 5px;
+  pointer-events: none;
+  transition: .2s;
+}
+
+.form-input input,
+textarea {
+  width: 100%;
+  height: 50px;
+  font-size: 0.9rem;
+  padding-top: 12px;
+  padding-left: 5px;
+  color: var(--bg-color);
+  background-color: transparent;
+  border: 1.2px solid var(--bg-color);
+  outline: none;
+}
+
+.form-input input:focus,
+textarea:focus {
+  padding: 1.15rem;
+  border-color: var(--bg-color);
+}
+
+.form-input input:focus~label,
+.form-input input:valid~label,
+.form-input textarea:focus~label,
+.form-input textarea:valid~label {
+  top: 0;
+  font-size: 1.15rem;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
 }
 
 footer {
@@ -176,4 +260,112 @@ footer {
   bottom: 0;
   margin-top: auto;
   width: 100%;
+}
+
+footer a {
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+}
+
+footer>div>div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design for Landscape and Portrait Layouts */
+@media (max-width: 1024px) and (orientation: landscape) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .logo {
+    font-size: 10rem;
+  }
+
+  section {
+    padding: 50px 10vw;
+  }
+
+  form {
+    margin: 50px 20px;
+  }
+
+  .form-input input,
+  textarea {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    font-size: 8rem;
+  }
+
+  nav {
+    height: 50px;
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 30px 5vw;
+    min-height: 400px;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  form {
+    margin: 30px 10px;
+  }
+
+  .form-input input,
+  textarea {
+    max-width: 240px;
+  }
+}
+
+/* Additional Media Query for Small Screens (Mobile-Friendly) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 5rem;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .form-input input,
+  textarea {
+    max-width: 200px;
+  }
 }

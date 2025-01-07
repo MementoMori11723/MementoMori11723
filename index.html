@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 </head>
@@ -31,7 +32,7 @@
     </div>
   </nav>
   <main>
-    <section id="home" style="position: relative; height: 100vh">
+    <section id="home" style="position: relative; height: 65vh">
       <div style="
             position: relative;
             z-index: 2;
@@ -52,7 +53,7 @@
           </p>
 
           <br />
-          <a href="/#contact" class="btn">Let's connect</a>
+          <a href="/#contact" class="btn">Let's connect <i data-feather="arrow-right"></i></a>
         </div>
         <div>
           <div id="donut" style="
@@ -79,34 +80,29 @@
             gap: 70px;
             justify-content: center;
             align-items: center;
+            line-height: 2.3rem;
           ">
-        <div>
-          <img src="/assets/img/favicon.png" alt="profile pic" title="This is my github profile pic" width="300px" height="300px"
+        <div title="This is my github profile pic">
+          <img src="/assets/img/favicon.png" alt="profile pic" width="300px" height="300px"
             style="border-radius: 50%; border: 5px solid white;" />
         </div>
         <div>
-          <p style="
-                font-weight: 500;
-                font-size: 1.3rem;
-                text-align: justify;
-                margin-top: 150px;
-              ">
-
-            I'm a software engineer from <span style="color: var(--btn-color);">India</span>, driven by tech,
-            problem-solving, and growth. I craft efficient backends and seamless UIs, always pushing to stay ahead.
+          <p style="font-weight: 500; font-size: 1.3rem; text-align: justify; margin-top: 150px;">
+            Hi, my name is <span style="color: var(--btn-color);">Yasasvi Gumma</span>, I'm a software engineer from
+            <span style="color: var(--btn-color);">India</span>, who is driven by tech and
+            problem-solving. I strive to craft efficient backends and seamless UIs, always pushing myself to stay ahead.
             <br><br>
 
-            <span class="about-sub-tag">My motto</span><br /><br />
-            "Code is the spell, and developers are the wizards. With the right knowledge, they can accomplish anything
-            and shape the world." <span style="font-style: italic; padding: 20px; color: var(--btn-color);">—
-              Yasasvi</span><br /><br />
+            <span class="about-sub-tag">My motto</span><br /> "Code is the spell, and developers are the wizards. With
+            the right knowledge, they can accomplish anything and shape the world. "<br /><span
+              style="font-style: italic; font-size: 1.15rem; color: var(--btn-color);">—Yasasvi Gumma</span><br /><br />
 
-            <span class="about-sub-tag">My aspirations</span><br /><br />
-            My goal is to become a developer as influential as <span
-              style="font-style: italic; padding: 20px; color: var(--btn-color);">Linus Torvalds,</span> constantly
-            pushing boundaries and refining skills, while contributing to the tech community.<br /><br />
+            <span class="about-sub-tag">My aspirations</span><br /> My goal is to become a developer as influential as
+            <span style="font-style: italic; color: var(--btn-color);">Linus Torvalds,</span> constantly
+            pushing boundaries and refining
+            skills, while contributing to the tech community.<br /><br />
 
-            <span class="about-sub-tag">My hobbies</span><br /><br />
+            <span class="about-sub-tag">My hobbies</span><br />
             <strong>Anime</strong>, <strong>Hollywood movies</strong>, <strong>TV shows</strong>, and
             <strong>music</strong> are key interests. <strong>Nature</strong> and <strong>food</strong> also inspire me,
             and I find joy in quiet moments and new experiences.<br /><br />
@@ -143,15 +139,36 @@
       </h2>
       <div>
         <form action="">
-          <input type="text" name="name" value="name" />
-          <input type="text" name="email" value="email" />
-          <input type="text" name="message" value="message" />
+          <div class="form-input"><input type="email" id="email" autocomplete="email" required><label
+              for="email">Email</label></div>
+          <div class="form-input"><input type="text" id="name" autocomplete="name" required><label
+              for="name">Name</label></div>
+          <div class="form-input"><input type="text" id="subject" autocomplete="cc-type" required><label
+              for="subject">Subject</label></div>
+          <div class="form-input"><textarea type="text" id="message" autocomplete="work" style="height: 85px;"
+              required></textarea><label for="message">Message</label></div>
+          <button class="btn" type="submit"><i data-feather="send"></i> Send</button>
         </form>
       </div>
     </section>
   </main>
-  <footer style="background-color: var(--btn-color); color: var()">
-    <p>This is footer</p>
+  <footer style="background-color: var(--btn-color);">
+    <div style="padding-top: 20px; padding-bottom: 20px;">
+      <div>
+        <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><i data-feather="linkedin"></i>linkedin</a> |
+        <a href="mailto:contact@yasasvi.site" class="links"><i data-feather="mail"></i>contact@yasasvi.site</a> |
+        <a href="https://github.com/MementoMori11723" class="links"><i data-feather="github"></i>github</a>
+      </div>
+      <br />
+      <div>
+        <a href="/#home">Home</a> |
+        <a href="/#about">about</a> |
+        <a href="/#skills">skills</a> |
+        <a href="/#projects">projects</a> |
+        <a href="/#experience">experience</a> |
+        <a href="/#contact">contact</a>
+      </div>
+    </div>
   </footer>
 </body>
 <script src="/assets/js/navbar.js"></script>

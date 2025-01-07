@@ -1,217 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Yasasvi's portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg-color: #212121;
-        --txt-color: white;
-        --subtxt-color: gray;
-        --btn-color: #43fa96;
-      }
 
-      body {
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <title>Yasasvi's portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+</head>
 
-      body,
-      a {
-        background-color: var(--bg-color);
-        color: var(--txt-color);
-        font-family: "Arvo", monospace;
-      }
-
-      h1 {
-        font-size: 6rem;
-      }
-
-      a {
-        font-size: 1.2rem;
-        text-decoration: none;
-      }
-
-      nav {
-        padding: 0;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        top: 0;
-        position: sticky;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        transition: background-color 0.01s ease-in-out;
-      }
-
-      nav > div {
-        display: flex;
-        align-items: center;
-        padding: 0 8px;
-      }
-
-      nav > div:last-child {
-        gap: 12px;
-      }
-
-      nav a {
-        text-decoration: none;
-        font-size: 18px;
-        padding: 8px 10px;
-        transition: color 0.01s ease-in-out;
-      }
-
-      nav.scrolled {
-        background-color: #1a1a1a;
-      }
-
-      nav.scrolled a {
-        color: var(--txt-color);
-        background-color: inherit;
-      }
-
-      nav a:hover {
-        color: var(--bg-color);
-        background-color: var(--btn-color);
-      }
-
-      #donut {
-        white-space: pre;
-        font-size: 18px;
-        font-family: monospace;
-        font-weight: bold;
-        color: var(--btn-color);
-      }
-
-      .logo {
-        color: var(--txt-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15rem;
-        color: inherit;
-      }
-
-      .logo > a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .logo > a > img {
-        padding-right: 0.7rem;
-      }
-
-      .logo a:hover {
-        color: var(--btn-color);
-        background-color: var(--bg-color);
-      }
-
-      .btn {
-        background-color: var(--btn-color);
-        color: var(--bg-color);
-        margin-top: 5px;
-        padding: 8px;
-        border-radius: 5px;
-      }
-
-      section {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 500px;
-        max-width: 80%;
-        padding: 100px 20vw;
-      }
-    </style>
-  </head>
-
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="/">
-          <img
-            src="/assets/img/favicon.png"
-            alt="logo"
-            width="30px"
-            height="30px"
-          />
-          <span style="font-size: 20px">Yasasvi Gumma</span>
-        </a>
-      </div>
-      <div>
-        <a href="/#home">Home</a>
-        <a href="/#about">about</a>
-        <a href="/#skills">skills</a>
-        <a href="/#projects">projects</a>
-        <a href="/#experience">experience</a>
-        <a href="/#contact">contact</a>
-      </div>
-    </nav>
-    <main>
-      <section id="home" style="position: relative; height: 100vh">
-        <div
-          style="
+<body>
+  <nav>
+    <div class="logo">
+      <a href="/">
+        <span class="left"></span>
+        <span style="font-size: 20px">Yasasvi Gumma</span>
+        <span class="right"></span>
+      </a>
+    </div>
+    <div>
+      <a href="/#home">Home</a>
+      <a href="/#about">about</a>
+      <a href="/#skills">skills</a>
+      <a href="/#projects">projects</a>
+      <a href="/#experience">experience</a>
+      <a href="/#contact">contact</a>
+    </div>
+  </nav>
+  <main>
+    <section id="home" style="position: relative; height: 100vh">
+      <div style="
             position: relative;
             z-index: 2;
             display: flex;
             height: 100%;
             width: 125%;
-          "
-        >
-          <div>
-            <h1>
-              Hi There!<br />I'm a full stack <br />{<span
-                data-value="developer"
-                class="developer"
-                style="color: var(--btn-color)"
-                >developer</span
-              >}
-            </h1>
-            <script>
-              const letters = "abcdefghijklmnopqrstuvwxyz";
-              document.querySelector(".developer").onmouseover = (event) => {
-                let count = 0;
-                const interval = setInterval(() => {
-                  event.target.innerText = event.target.innerText
-                    .split("")
-                    .map((letter, index) => {
-                      if (index < count) {
-                        return event.target.dataset.value[index];
-                      }
-                      return letters[
-                        Math.floor(Math.random() * letters.length)
-                      ];
-                    })
-                    .join("");
-                  if (count >= event.target.dataset.value.length) {
-                    clearInterval(interval);
-                  }
-                  count += 1 / 2;
-                }, 35);
-              };
-            </script>
+          ">
+        <div>
+          <h1>
+            Hi There!<br />I'm a full stack <br />{<span data-value="developer" class="developer"
+              style="color: var(--btn-color)">developer</span>}
+          </h1>
+          <script src="/assets/js/developer.js"></script>
 
-            <p style="font-style: italic; font-weight: 500">
-              A developer driven by creativity, <br />
-              dedicated to turning ideas into impactful solutions.
-            </p>
+          <p style="font-style: italic; font-weight: 500">
+            A developer driven by creativity, <br />
+            dedicated to turning ideas into impactful solutions.
+          </p>
 
-            <br />
-            <a href="/#contact" class="btn">Let's connect</a>
-          </div>
-          <div>
-            <div
-              id="donut"
-              style="
+          <br />
+          <a href="/#contact" class="btn">Let's connect</a>
+        </div>
+        <div>
+          <div id="donut" style="
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -219,107 +63,97 @@
                 left: 550px;
                 z-index: -1;
                 overflow: hidden;
-              "
-            ></div>
+              "></div>
 
-            <script>
-              let A = 0,
-                B = 0,
-                M = Math;
-
-              const asciiframe = () => {
-                let b = [],
-                  z = [];
-                A += 0.05;
-                B += 0.07;
-                const cA = M.cos(A);
-                const sA = M.sin(A);
-                const cB = M.cos(B);
-                const sB = M.sin(B);
-
-                for (let k = 0; k < 1760; k++) {
-                  b[k] = k % 80 == 79 ? "\n" : " ";
-                  z[k] = 0;
-                }
-
-                for (let j = 0; j < 6.28; j += 0.07) {
-                  const ct = M.cos(j);
-                  const st = M.sin(j);
-
-                  for (let i = 0; i < 6.28; i += 0.02) {
-                    const sp = M.sin(i),
-                      cp = M.cos(i);
-                    const h = ct + 2;
-                    const D = 1 / (sp * h * sA + st * cA + 5);
-                    const t = sp * h * cA - st * sA;
-                    const x = (40 + 30 * D * (cp * h * cB - t * sB)) | 0;
-                    const y = (12 + 15 * D * (cp * h * sB + t * cB)) | 0;
-                    const o = x + 80 * y;
-                    const N =
-                      (8 *
-                        ((st * sA - sp * ct * cA) * cB -
-                          sp * ct * sA -
-                          st * cA -
-                          cp * ct * sB)) |
-                      0;
-
-                    if (y < 22 && y >= 0 && x >= 0 && x < 79 && D > z[o]) {
-                      z[o] = D;
-                      b[o] = ".,-~:;=!*#$@"[N > 0 ? N : 0];
-                    }
-                  }
-                }
-                document.getElementById("donut").textContent = b.join("");
-              };
-
-              const intervalId = setInterval(asciiframe, 50);
-            </script>
-          </div>
+          <script src="/assets/js/donut.js"></script>
         </div>
-      </section>
-      <section id="about">
+      </div>
+    </section>
+    <section id="about">
+      <h2 class="sub-heading">
+        <span class="command" title="A unix/linux command which gives more control">sudo</span>
+        About me
+      </h2>
+      <div style="
+            display: flex;
+            gap: 70px;
+            justify-content: center;
+            align-items: center;
+          ">
         <div>
-          <h1>About me</h1>
+          <img src="/assets/img/favicon.png" alt="profile pic" title="This is my github profile pic" width="300px" height="300px"
+            style="border-radius: 50%; border: 5px solid white;" />
         </div>
-      </section>
-      <section id="skills">
         <div>
-          <h1>Skills</h1>
+          <p style="
+                font-weight: 500;
+                font-size: 1.3rem;
+                text-align: justify;
+                margin-top: 150px;
+              ">
+
+            I'm a software engineer from <span style="color: var(--btn-color);">India</span>, driven by tech,
+            problem-solving, and growth. I craft efficient backends and seamless UIs, always pushing to stay ahead.
+            <br><br>
+
+            <span class="about-sub-tag">My motto</span><br /><br />
+            "Code is the spell, and developers are the wizards. With the right knowledge, they can accomplish anything
+            and shape the world." <span style="font-style: italic; padding: 20px; color: var(--btn-color);">—
+              Yasasvi</span><br /><br />
+
+            <span class="about-sub-tag">My aspirations</span><br /><br />
+            My goal is to become a developer as influential as <span
+              style="font-style: italic; padding: 20px; color: var(--btn-color);">Linus Torvalds,</span> constantly
+            pushing boundaries and refining skills, while contributing to the tech community.<br /><br />
+
+            <span class="about-sub-tag">My hobbies</span><br /><br />
+            <strong>Anime</strong>, <strong>Hollywood movies</strong>, <strong>TV shows</strong>, and
+            <strong>music</strong> are key interests. <strong>Nature</strong> and <strong>food</strong> also inspire me,
+            and I find joy in quiet moments and new experiences.<br /><br />
+          </p>
         </div>
-      </section>
-      <section id="projects">
-        <div>
-          <h1>Projects</h1>
-        </div>
-      </section>
-      <section id="experience">
-        <div>
-          <h1>Experence</h1>
-        </div>
-      </section>
-      <section id="contact">
-        <div>
-          <h1>Contact me</h1>
-          <form action="">
-            <input type="text" name="name" value="name" />
-            <input type="text" name="email" value="email" />
-            <input type="text" name="message" value="message" />
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>This is footer</p>
-    </footer>
-  </body>
-  <script>
-    document.addEventListener("scroll", () => {
-      const nav = document.querySelector("nav");
-      if (window.scrollY > 0) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    });
-  </script>
+      </div>
+    </section>
+    <section id="skills">
+      <h2 class="sub-heading">
+        <span class="command" title="A unix/linux command which gives information about other commands">man</span>
+        Skills
+      </h2>
+      <div></div>
+    </section>
+    <section id="projects">
+      <h2 class="sub-heading">
+        <span class="command" title="A command line tool which is used to change the directory or folder">cd</span>
+        Projects
+      </h2>
+      <div></div>
+    </section>
+    <section id="experience">
+      <h2 class="sub-heading">
+        <span class="command"
+          title="A unix/linux command which is used to give list of files and directory's or folders">ls</span>
+        Experience
+      </h2>
+      <div></div>
+    </section>
+    <section id="contact">
+      <h2 class="sub-heading">
+        <span class="command" title="A command line tool used to connect with different computers">ssh</span>
+        Contact me
+      </h2>
+      <div>
+        <form action="">
+          <input type="text" name="name" value="name" />
+          <input type="text" name="email" value="email" />
+          <input type="text" name="message" value="message" />
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer style="background-color: var(--btn-color); color: var()">
+    <p>This is footer</p>
+  </footer>
+</body>
+<script src="/assets/js/navbar.js"></script>
+
 </html>

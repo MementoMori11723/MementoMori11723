@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yasasvi's portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet" />
-  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 </head>
@@ -23,7 +24,7 @@
       </a>
     </div>
     <div>
-      <a href="/#home">Home</a>
+      <a href="/#">Home</a>
       <a href="/#about">about</a>
       <a href="/#skills">skills</a>
       <a href="/#projects">projects</a>
@@ -38,7 +39,7 @@
             z-index: 2;
             display: flex;
             height: 100%;
-            width: 125%;
+            width: 115%;
           ">
         <div>
           <h1>
@@ -53,7 +54,7 @@
           </p>
 
           <br />
-          <a href="/#contact" class="btn">Let's connect <i data-feather="arrow-right"></i></a>
+          <a href="/#contact" class="btn">Let's connect <i class="ti ti-arrow-right"></i></a>
         </div>
         <div>
           <div id="donut" style="
@@ -84,28 +85,47 @@
           ">
         <div title="This is my github profile pic">
           <img src="/assets/img/favicon.png" alt="profile pic" width="300px" height="300px"
-            style="border-radius: 50%; border: 5px solid white;" />
+            style="border-radius: 50%; border: 5px solid white" />
         </div>
         <div>
-          <p style="font-weight: 500; font-size: 1.3rem; text-align: justify; margin-top: 150px;">
-            Hi, my name is <span style="color: var(--btn-color);">Yasasvi Gumma</span>, I'm a software engineer from
-            <span style="color: var(--btn-color);">India</span>, who is driven by tech and
-            problem-solving. I strive to craft efficient backends and seamless UIs, always pushing myself to stay ahead.
-            <br><br>
+          <p style="
+                font-weight: 500;
+                font-size: 1.3rem;
+                text-align: justify;
+                margin-top: 150px;
+              ">
+            Hi, my name is
+            <span style="color: var(--btn-color)">Yasasvi Gumma</span>, a
+            <strong>21-year-old</strong> self-taught software engineer from
+            <span style="color: var(--btn-color)">India</span> with
+            <strong>4 years of experience</strong>.<br /><br />
+            I started programming at <strong>17</strong> during my undergraduate studies and
+            have been driven by a passion for tech and problem-solving ever
+            since. Inspired by nature, food, and quiet moments, I enjoy
+            <strong>anime</strong>, <strong>movies</strong>,
+            <strong>TV shows</strong>, and <strong>music</strong>, which fuel
+            my creativity.<br /><br />
+            I focus on building efficient backends and seamless UIs, always
+            striving to stay ahead.
 
-            <span class="about-sub-tag">My motto</span><br /> "Code is the spell, and developers are the wizards. With
-            the right knowledge, they can accomplish anything and shape the world. "<br /><span
-              style="font-style: italic; font-size: 1.15rem; color: var(--btn-color);">—Yasasvi Gumma</span><br /><br />
+            <br /><br />
+            <span class="about-sub-tag">My motto</span>
+            "Code is the spell, and developers are the wizards. With the right
+            knowledge, they can accomplish anything and shape the world."
+            <br />
+            <span style="
+                  font-style: italic;
+                  font-size: 1.15rem;
+                  color: var(--btn-color);
+                ">—Yasasvi Gumma</span>
 
-            <span class="about-sub-tag">My aspirations</span><br /> My goal is to become a developer as influential as
-            <span style="font-style: italic; color: var(--btn-color);">Linus Torvalds,</span> constantly
-            pushing boundaries and refining
-            skills, while contributing to the tech community.<br /><br />
+            <br /><br />
 
-            <span class="about-sub-tag">My hobbies</span><br />
-            <strong>Anime</strong>, <strong>Hollywood movies</strong>, <strong>TV shows</strong>, and
-            <strong>music</strong> are key interests. <strong>Nature</strong> and <strong>food</strong> also inspire me,
-            and I find joy in quiet moments and new experiences.<br /><br />
+            <span class="about-sub-tag">My aspirations</span>
+            is to become a developer as influential as
+            <span style="font-style: italic; color: var(--btn-color)">Linus Torvalds,</span>
+            pushing boundaries, refining skills, and making meaningful
+            contributions to the tech community.
           </p>
         </div>
       </div>
@@ -138,37 +158,64 @@
         Contact me
       </h2>
       <div>
-        <form action="">
-          <div class="form-input"><input type="email" id="email" autocomplete="email" required><label
-              for="email">Email</label></div>
-          <div class="form-input"><input type="text" id="name" autocomplete="name" required><label
-              for="name">Name</label></div>
-          <div class="form-input"><input type="text" id="subject" autocomplete="cc-type" required><label
-              for="subject">Subject</label></div>
-          <div class="form-input"><textarea type="text" id="message" autocomplete="work" style="height: 85px;"
-              required></textarea><label for="message">Message</label></div>
-          <button class="btn" type="submit"><i data-feather="send"></i> Send</button>
+        <form action="https://formsubmit.co/dc842988ea51ac65db9137e8a84854fd" method="POST">
+          <input type="hidden" name="_subject" value="New submission!" />
+          <input type="hidden" name="_next" value="http://yasasvi.site/assets/html/thanks.html" />
+          <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase" />
+          <input type="hidden" name="_autoresponse" value="Thank you for responding!" />
+          <input type="hidden" name="_template" value="table" />
+          <p style="font-size: 2rem; font-weight: 700">Send a message!</p>
+          <div class="form-input">
+            <input type="email" id="email" name="email" autocomplete="email" required /><label for="email">Email</label>
+          </div>
+          <div class="form-input">
+            <input type="text" id="name" name="name" autocomplete="name" required /><label for="name">Name</label>
+          </div>
+          <div class="form-input">
+            <input type="text" id="subject" name="subject" autocomplete="cc-type" required /><label
+              for="subject">Subject</label>
+          </div>
+          <div class="form-input">
+            <textarea type="text" id="message" name="message" autocomplete="work" style="height: 85px"
+              required></textarea><label for="message">Message</label>
+          </div>
+          <button type="submit"><i class="ti ti-send"></i> Send</button>
         </form>
       </div>
     </section>
   </main>
-  <footer style="background-color: var(--btn-color);">
-    <div style="padding-top: 20px; padding-bottom: 20px;">
+  <footer style="background-color: var(--btn-color)">
+    <p align="center" style="font-size: 1.1rem">Social media links</p>
+    <div style="padding-bottom: 10px">
       <div>
-        <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><i data-feather="linkedin"></i>linkedin</a> |
-        <a href="mailto:contact@yasasvi.site" class="links"><i data-feather="mail"></i>contact@yasasvi.site</a> |
-        <a href="https://github.com/MementoMori11723" class="links"><i data-feather="github"></i>github</a>
+        <a href="mailto:contact@yasasvi.site" class="links"><i class="ti ti-mail"></i>Email</a>
+        <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><i
+            class="ti ti-brand-linkedin"></i>Linkedin</a>
+        <a href="https://github.com/MementoMori11723" class="links"><i class="ti ti-brand-github"></i>Github</a>
       </div>
       <br />
+      <p align="center" style="font-size: 1.1rem">Other links</p>
       <div>
-        <a href="/#home">Home</a> |
-        <a href="/#about">about</a> |
-        <a href="/#skills">skills</a> |
-        <a href="/#projects">projects</a> |
-        <a href="/#experience">experience</a> |
+        <a href="/#home">Home</a>
+        <a href="/#about">about</a>
+        <a href="/#skills">skills</a>
+        <a href="/#projects">projects</a>
+        <a href="/#experience">experience</a>
         <a href="/#contact">contact</a>
       </div>
     </div>
+    <p id="copyright" align="center">
+      &copy; 2025 yasasvi.site - All Rights Reserved.
+    </p>
+    <script>
+      (() => {
+        const copyrightElement = document.getElementById("copyright");
+        copyrightElement.innerHTML =
+          "&copy;  " +
+          new Date().getFullYear() +
+          " yasasvi.site - All Rights Reserved.";
+      })();
+    </script>
   </footer>
 </body>
 <script src="/assets/js/navbar.js"></script>

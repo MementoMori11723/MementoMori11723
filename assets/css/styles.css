@@ -59,7 +59,9 @@ nav a {
 }
 
 nav.scrolled {
-  background-color: #171717;
+  background-color: color-mix(in srgb,
+      var(--bg-color) 95%,
+      var(--txt-color) 7%);
   z-index: 10;
 }
 
@@ -120,7 +122,6 @@ nav a:hover {
   color: var(--bg-color);
   margin-top: 5px;
   padding: 8px;
-  border-radius: 5px;
   width: 30%;
   gap: 10px;
   display: flex;
@@ -138,7 +139,7 @@ section {
   padding: 100px 20vw;
   animation: apper linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 50%;
 }
 
 @keyframes apper {
@@ -190,20 +191,31 @@ form {
   justify-content: center;
   align-items: center;
   margin: 150px 70px;
-  background-color: var(--txt-color);
+  background-color: color-mix(in srgb, var(--txt-color), var(--bg-color) 92%);
   border-radius: 0.3rem;
   padding: 2rem 3rem;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 form>button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-family: "Arvo", monospace;
   font-size: 1.3rem;
-  border: none;
+  background-color: inherit;
+  color: var(--txt-color);
+  border: 2px solid var(--btn-color);
   outline: none;
-  width: 70%;
+  width: 20%;
   height: 3rem;
   gap: 10px;
+}
+
+form>button:hover {
+  background-color: var(--btn-color);
+  color: var(--bg-color);
 }
 
 .form-input {
@@ -218,10 +230,19 @@ form>button {
   left: 5px;
   transform: translateY(-50%);
   font-size: 1rem;
-  color: var(--bg-color);
+  color: var(--txt-color);
   padding: 0 5px;
   pointer-events: none;
-  transition: .2s;
+  transition: 0.2s;
+}
+
+.form-input input {
+  padding-top: 8px;
+  font-family: "Arvo", monospace;
+}
+
+.form-input textarea {
+  padding-top: 15px;
 }
 
 .form-input input,
@@ -229,18 +250,16 @@ textarea {
   width: 100%;
   height: 50px;
   font-size: 0.9rem;
-  padding-top: 12px;
   padding-left: 5px;
-  color: var(--bg-color);
+  color: var(--txt-color);
   background-color: transparent;
-  border: 1.2px solid var(--bg-color);
+  border: 1.7px solid var(--subtxt-color);
   outline: none;
 }
 
 .form-input input:focus,
 textarea:focus {
-  padding: 1.15rem;
-  border-color: var(--bg-color);
+  border-color: var(--txt-color);
 }
 
 .form-input input:focus~label,
@@ -256,7 +275,6 @@ textarea:focus {
 footer {
   background-color: var(--btn-color);
   color: var(--bg-color);
-  text-align: center;
   bottom: 0;
   margin-top: auto;
   width: 100%;
@@ -265,107 +283,39 @@ footer {
 footer a {
   background-color: var(--btn-color);
   color: var(--bg-color);
+  font-size: 1.08rem;
+  text-decoration: underline;
 }
 
-footer>div>div:first-child {
+footer>div>div:first-child,
+footer>div>div:last-child {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
+}
+
+footer>div>div:first-child {
+  gap: 12px;
 }
 
 .links {
   display: flex;
-  flex-direction: column;
+  padding: 7px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  border: 1px solid var(--bg-color);
+  gap: 5px;
 }
 
-/* Responsive Design for Landscape and Portrait Layouts */
-@media (max-width: 1024px) and (orientation: landscape) {
-  h1 {
-    font-size: 3.5rem;
-  }
-
-  .logo {
-    font-size: 10rem;
-  }
-
-  section {
-    padding: 50px 10vw;
-  }
-
-  form {
-    margin: 50px 20px;
-  }
-
-  .form-input input,
-  textarea {
-    max-width: 280px;
-  }
+.links:hover {
+  background-color: var(--txt-color);
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .logo {
-    font-size: 8rem;
-  }
-
-  nav {
-    height: 50px;
-    flex-wrap: wrap;
-  }
-
-  section {
-    padding: 30px 5vw;
-    min-height: 400px;
-  }
-
-  .sub-heading {
-    font-size: 2rem;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-  }
-
-  form {
-    margin: 30px 10px;
-  }
-
-  .form-input input,
-  textarea {
-    max-width: 240px;
-  }
-}
-
-/* Additional Media Query for Small Screens (Mobile-Friendly) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  nav {
-    height: 50px;
-    font-size: 14px;
-  }
-
-  .logo {
-    font-size: 5rem;
-  }
-
-  .btn {
-    padding: 5px 10px;
-    font-size: 0.8rem;
-  }
-
-  .form-input input,
-  textarea {
-    max-width: 200px;
-  }
+.links i {
+  width: 18px;
+  height: 18px;
 }

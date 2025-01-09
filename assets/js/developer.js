@@ -1,22 +1,18 @@
 const letters = "abcdefghijklmnopqrstuvwxyz";
-function devAnimation(event) {
-  let count = 0;
-  const interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if (index < count) {
-          return event.target.dataset.value[index];
-        }
-        return letters[Math.floor(Math.random() * letters.length)];
-      })
-      .join("");
-    if (count >= event.target.dataset.value.length) {
-      clearInterval(interval);
-    }
-    count += 1 / 2;
-  }, 35);
+function devAnimation(e) {
+  let t = 0,
+    n = setInterval(() => {
+      (e.target.innerText = e.target.innerText
+        .split("")
+        .map((n, r) =>
+          r < t
+            ? e.target.dataset.value[r]
+            : letters[Math.floor(Math.random() * letters.length)],
+        )
+        .join("")),
+        t >= e.target.dataset.value.length && clearInterval(n),
+        (t += 0.5);
+    }, 35);
 }
-
-document.querySelector(".developer").onmouseover = (event) => devAnimation(event);
-document.querySelector(".developer").onclick = (event) => devAnimation(event);
+(document.querySelector(".developer").onmouseover = (e) => devAnimation(e)),
+  (document.querySelector(".developer").onclick = (e) => devAnimation(e));

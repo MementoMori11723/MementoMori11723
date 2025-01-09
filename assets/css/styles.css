@@ -59,9 +59,7 @@ nav a {
 }
 
 nav.scrolled {
-  background-color: color-mix(in srgb,
-      var(--bg-color) 95%,
-      var(--txt-color) 7%);
+  background-color: color-mix(in srgb, var(--bg-color), var(--txt-color) 5%);
   z-index: 10;
 }
 
@@ -118,8 +116,9 @@ nav a:hover {
 }
 
 .btn {
-  background-color: var(--btn-color);
-  color: var(--bg-color);
+  border: 1px solid var(--btn-color);
+  background-color: inherit;
+  color: inherit;
   margin-top: 5px;
   padding: 8px;
   width: 30%;
@@ -129,17 +128,22 @@ nav a:hover {
   align-items: center;
 }
 
+.btn:hover, .btn:active {
+  color: var(--bg-color);
+  background-color: var(--btn-color);
+}
+
 section {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 500px;
-  max-width: 80%;
+  max-width: 90%;
   padding: 100px 20vw;
   animation: apper linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 50%;
+  animation-range: entry 0% cover 47%;
 }
 
 @keyframes apper {
@@ -173,6 +177,105 @@ section {
 .about-sub-tag {
   font-size: 1.27rem;
   color: var(--subtxt-color);
+}
+
+#about .about-links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--txt-color);
+}
+
+#about .about-links a:hover {
+  color: var(--bg-color);
+  background-color: var(--txt-color);
+}
+
+#skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#skills .data a {
+  text-align: center;
+  padding: 5px;
+  margin-right: 7px;
+  border: 1px solid var(--txt-color);
+}
+
+#skills .data a i {
+  text-align: center;
+  font-size: 1.3rem;
+  padding-right: 4px;
+  color: var(--subtxt-color);
+}
+
+#skills .data a:hover {
+  color: var(--bg-color);
+  background-color: var(--txt-color);
+}
+
+#skills .data {
+  height: 100%;
+  text-align: justify;
+  margin-top: 130px;
+  width: 87%;
+  gap: 50px;
+}
+
+#skills .data .txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+}
+
+#skills .data .txt>p {
+  text-align: justify;
+}
+
+#skills .left,
+#skills .right {
+  font-size: 2rem;
+}
+
+#skills .left {
+  text-align: left;
+}
+
+#skills .right {
+  text-align: right;
+  margin: 50px 0;
+}
+
+#skills .left p,
+#skills .right p {
+  font-weight: bold;
+}
+
+#skills .left i,
+#skills .right i {
+  color: var(--btn-color);
+}
+
+#skills .certificates {
+  text-align: right;
+}
+
+#skills .certificates a {
+  border: none;
+  color: var(--btn-color);
+}
+
+#skills .certificates a:hover {
+  color: var(--btn-color);
+  background-color: var(--bg-color);
+  text-decoration: underline;
 }
 
 #contact div {

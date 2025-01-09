@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Yasasvi, a passionate software developer with expertise in Golang, web development, and machine learning. Explore projects like 'Blood Transmutation Using Machine Learning Tools', 'Assured Contract Farming System for Stable Market Access', and more. Skills include backend development, blockchain integration, and UI design. Dedicated to creating innovative solutions with an emphasis on clean, efficient code.">
   <title>Yasasvi's portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +13,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="icon" type="image/webp" href="/assets/img/favicon.webp" />
 </head>
 
 <body>
@@ -27,8 +29,8 @@
       <a href="/#">Home</a>
       <a href="/#about">about</a>
       <a href="/#skills">skills</a>
-      <a href="/#projects">projects</a>
       <a href="/#experience">experience</a>
+      <a href="/#projects">projects</a>
       <a href="/#contact">contact</a>
     </div>
   </nav>
@@ -64,9 +66,8 @@
                 bottom: 0;
                 left: 550px;
                 z-index: -1;
-                overflow: hidden;
+                overflow: visible;
               "></div>
-
           <script src="/assets/js/donut.js"></script>
         </div>
       </div>
@@ -83,9 +84,15 @@
             align-items: center;
             line-height: 2.3rem;
           ">
-        <div title="This is my github profile pic">
-          <img src="/assets/img/favicon.png" alt="profile pic" width="300px" height="300px"
-            style="border-radius: 50%; border: 5px solid white" />
+        <div>
+          <img src="/assets/img/favicon.webp" alt="profile pic" width="300px" height="300px"
+            style="border-radius: 50%; border: 5px solid white" title="This is my github profile pic" />
+          <div class="about-links">
+            <a href="mailto:contact@yasasvi.site" class="links"><i class="ti ti-mail"></i>Email</a>
+            <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><i
+                class="ti ti-brand-linkedin"></i>Linkedin</a>
+            <a href="https://github.com/MementoMori11723" class="links"><i class="ti ti-brand-github"></i>Github</a>
+          </div>
         </div>
         <div>
           <p style="
@@ -94,25 +101,18 @@
                 text-align: justify;
                 margin-top: 150px;
               ">
-            Hi, my name is
-            <span style="color: var(--btn-color)">Yasasvi Gumma</span>, a
-            <strong>21-year-old</strong> self-taught software engineer from
-            <span style="color: var(--btn-color)">India</span> with
-            <strong>4 years of experience</strong>.<br /><br />
-            I started programming at <strong>17</strong> during my undergraduate studies and
-            have been driven by a passion for tech and problem-solving ever
-            since. Inspired by nature, food, and quiet moments, I enjoy
-            <strong>anime</strong>, <strong>movies</strong>,
-            <strong>TV shows</strong>, and <strong>music</strong>, which fuel
-            my creativity.<br /><br />
-            I focus on building efficient backends and seamless UIs, always
-            striving to stay ahead.
-
+            Hi, I’m <span style="color: var(--btn-color)">Yasasvi Gumma</span>, a <strong>21-year-old</strong>
+            self-taught software engineer from <span style="color: var(--btn-color)">India</span> with <strong>4 years
+              of experience</strong>. <br> <br>I began programming at <strong>17</strong> during my undergraduate
+            studies, driven by a passion for tech and problem-solving. Inspired by nature, food, and quiet
+            moments.<br><br> I
+            enjoy <strong>anime</strong>, <strong>movies</strong>, and <strong>music</strong>, which spark my
+            creativity. My focus is on building efficient backends and seamless UIs while continuously learning and
+            growing in tech.
             <br /><br />
             <span class="about-sub-tag">My motto</span>
             "Code is the spell, and developers are the wizards. With the right
-            knowledge, they can accomplish anything and shape the world."
-            <br />
+            knowledge, they can accomplish anything and shape the world."&nbsp;
             <span style="
                   font-style: italic;
                   font-size: 1.15rem;
@@ -120,7 +120,6 @@
                 ">—Yasasvi Gumma</span>
 
             <br /><br />
-
             <span class="about-sub-tag">My aspirations</span>
             is to become a developer as influential as
             <span style="font-style: italic; color: var(--btn-color)">Linus Torvalds,</span>
@@ -135,14 +134,65 @@
         <span class="command" title="A unix/linux command which gives information about other commands">man</span>
         Skills
       </h2>
-      <div></div>
-    </section>
-    <section id="projects">
-      <h2 class="sub-heading">
-        <span class="command" title="A command line tool which is used to change the directory or folder">cd</span>
-        Projects
-      </h2>
-      <div></div>
+      <div class="data">
+        <p style="font-size: 1.4rem; line-height: 2rem;">I'm a <strong>collaborative</strong> and
+          <strong>adaptable</strong> individual with strong
+          communication and problem-solving skills, fluent in
+          <span style="color: var(--btn-color)">English</span>, <span style="color: var(--btn-color)">Telugu</span>, and
+          <span style="color: var(--btn-color)">Hindi</span>.
+        </p>
+        <div class="txt">
+          <p>Technical skills</p>
+        </div>
+        <div class="left">
+          <p>
+            <span> <i class="ti ti-language"></i> Programming Languages</span>
+          <div>
+            <a href="https://www.python.org/" target="_blank"
+              title="Python is a programming language that is easy to get started with."><i
+                class="ti ti-brand-python"></i>Python</a>
+            <a href="https://www.oracle.com/in/java/" target="_blank"><i class="ti ti-coffee"></i>Java</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript"
+              target="_blank"><i class="ti ti-file-type-js"></i>Javascript</a>
+            <a href="https://go.dev/" target="_blank"><i class="ti ti-brand-golang"></i>Golang</a>
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><i
+                class="ti ti-hexagon-letter-c"></i>C/C++</a>
+          </div>
+          </p>
+        </div>
+        <div class="right">
+          <p>
+            <span> <i class="ti ti-tools"></i> Tools & Frameworks</span>
+          <div>
+            <a href="https://react.dev/" target="_blank"><i class="ti ti-brand-react"></i>React</a>
+            <a href="https://flask.palletsprojects.com/en/stable/" target="_blank"><i
+                class="ti ti-brand-python"></i>Flask</a>
+            <a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><i
+                class="ti ti-brand-ansible"></i>Ansible</a>
+            <a href="https://www.terraform.io/" target="_blank"><i class="ti ti-brand-terraform"></i>Terraform</a>
+            <a href="https://render.com/" target="_blank"><i class="ti ti-border-style"></i>Render</a>
+            <a href="https://www.linode.com/" target="_blank"><i class="ti ti-server"></i>Linode</a>
+          </div>
+          </p>
+        </div>
+        <div class="left">
+          <p>
+            <span> <i class="ti ti-heart"></i> Favorites</span>
+          <div>
+            <a href="https://go.dev/" target="_blank"><i class="ti ti-brand-golang"></i>Golang</a>
+            <a href="https://www.markdownguide.org/" target="_blank"><i class="ti ti-markdown"></i>Markdown</a>
+            <a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><i
+                class="ti ti-brand-ansible"></i>Ansible</a>
+            <a href="https://ubuntu.com/" target="_blank"
+              title="It's an operating system that is free and open-source (I use Arch btw)."><i
+                class="ti ti-terminal-2"></i>Linux</a>
+            <a href="https://neovim.io/" target="_blank"><i class="ti ti-terminal"></i>Neovim</a>
+          </div>
+          </p>
+        </div>
+        <div class="certificates"><a href="/assets/yasasvi's-certificates.pdf" target="_blank">View my certificates
+            here</a></div>
+      </div>
     </section>
     <section id="experience">
       <h2 class="sub-heading">
@@ -150,7 +200,19 @@
           title="A unix/linux command which is used to give list of files and directory's or folders">ls</span>
         Experience
       </h2>
-      <div></div>
+      <div>
+        <div class="resume"><a href="/assets/yasasvi-gumma.pdf" target="_blank">View my resume here</a></div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="sub-heading">
+        <span class="command" title="A command line tool which is used to change the directory or folder">cd</span>
+        Projects
+      </h2>
+      <div>
+        <div class="github"><a href="https://github.com/MementoMori11723?tab=repositories" target="_blank">View my
+            github here</a></div>
+      </div>
     </section>
     <section id="contact">
       <h2 class="sub-heading">
@@ -176,7 +238,7 @@
               for="subject">Subject</label>
           </div>
           <div class="form-input">
-            <textarea type="text" id="message" name="message" autocomplete="work" style="height: 85px"
+            <textarea type="text" id="message" name="message" autocomplete="work" style="height: 85px; width: 100%;"
               required></textarea><label for="message">Message</label>
           </div>
           <button type="submit"><i class="ti ti-send"></i> Send</button>
@@ -199,8 +261,8 @@
         <a href="/#home">Home</a>
         <a href="/#about">about</a>
         <a href="/#skills">skills</a>
-        <a href="/#projects">projects</a>
         <a href="/#experience">experience</a>
+        <a href="/#projects">projects</a>
         <a href="/#contact">contact</a>
       </div>
     </div>

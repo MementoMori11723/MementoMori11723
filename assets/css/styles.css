@@ -128,7 +128,8 @@ nav a:hover {
   align-items: center;
 }
 
-.btn:hover, .btn:active {
+.btn:hover,
+.btn:active {
   color: var(--bg-color);
   background-color: var(--btn-color);
 }
@@ -143,7 +144,7 @@ section {
   padding: 100px 20vw;
   animation: apper linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 47%;
+  animation-range: entry 0% cover 40%;
 }
 
 @keyframes apper {
@@ -179,12 +180,29 @@ section {
   color: var(--subtxt-color);
 }
 
+#about div {
+  margin-top: 20px;
+}
+
+#about div>div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #about .about-links {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: 40px;
   background-color: var(--bg-color);
+  gap: 7px;
+  height: 35px;
+}
+
+#about .about-links a {
   border: 1px solid var(--txt-color);
+  margin: 0;
 }
 
 #about .about-links a:hover {
@@ -263,19 +281,159 @@ section {
   color: var(--btn-color);
 }
 
-#skills .certificates {
-  text-align: right;
-}
-
-#skills .certificates a {
+#skills .out-links a {
   border: none;
-  color: var(--btn-color);
+  margin: 0;
+  padding: 0;
 }
 
-#skills .certificates a:hover {
+.out-links {
+  text-align: right;
+  border: none;
+  font-size: 3rem;
+  top: 300px;
+}
+
+.out-links a {
+  color: var(--btn-color);
+  background-color: var(--bg-color);
+}
+
+.out-links a i {
+  border: none;
+  color: var(--subtxt-color);
+  padding: 0.2rem;
+}
+
+.out-links a:hover,
+#skills .out-links a:hover {
   color: var(--btn-color);
   background-color: var(--bg-color);
   text-decoration: underline;
+}
+
+#experience>div {
+  margin-top: 130px;
+  font-size: 1.4rem;
+  padding: 30px;
+  text-align: justify;
+  line-height: 2.3rem;
+}
+
+.auto-blur p {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 70px 0;
+}
+
+.auto-blur ol {
+  line-height: 2.3rem;
+  text-align: justify;
+  border: 4px dashed var(--btn-color);
+  padding: 50px;
+}
+
+.auto-blur li {
+  animation: autoBlur ease-in-out both;
+  will-change: filter;
+  animation-timeline: view();
+  margin-top: 22px;
+  color: var(--subtxt-color);
+}
+
+.auto-blur li i,
+.auto-blur span {
+  font-size: 1.8rem;
+}
+
+.auto-blur span {
+  color: var(--btn-color);
+}
+
+.auto-blur li i {
+  color: var(--subtxt-color);
+  padding-right: 10px;
+}
+
+@keyframes autoBlur {
+  0% {
+    filter: blur(8rem);
+    color: var(--subtxt-color);
+  }
+
+  35%,
+  40% {
+    filter: blur(0px);
+    color: var(--txt-color);
+  }
+
+  100% {
+    filter: blur(8rem);
+    color: var(--subtxt-color);
+  }
+}
+
+.cards {
+  margin-top: 130px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 20px;
+}
+
+.cards>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 30px;
+  text-align: justify;
+  padding: 15px;
+  font-size: 1.03rem;
+  line-height: 1.7rem;
+  border: 2px dashed var(--subtxt-color);
+  position: relative;
+}
+
+.cards img {
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  color: var(--btn-color);
+  margin: 10px 0;
+}
+
+.cards>div:hover .project-title,
+.cards>div:active .project-title {
+  color: var(--bg-color);
+}
+
+.cards>div:hover {
+  background-color: var(--txt-color);
+  color: var(--subtxt-color);
+  border: 1px solid var(--txt-color);
+  border-radius: 3px;
+  transform: scale(1.1);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cards a {
+  color: var(--btn-color);
+  padding: 5px;
+  margin-top: auto;
+}
+
+.cards div:hover a,
+.cards div:active a {
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+}
+
+#projects>div>div:last-child {
+  margin-top: 30px;
 }
 
 #contact div {

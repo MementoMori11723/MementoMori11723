@@ -11,7 +11,7 @@ function devAnimation(e) {
         )
         .join("")),
         t >= e.target.dataset.value.length && clearInterval(n),
-        (t += 0.5);
+        (t += 0.45);
     }, 35);
 }
 (document.querySelector(".developer").onmouseover = (e) => devAnimation(e)),

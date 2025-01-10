@@ -3,17 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Portfolio of Yasasvi, a passionate software developer with expertise in Golang, web development, and machine learning. Explore projects like 'Blood Transmutation Using Machine Learning Tools', 'Assured Contract Farming System for Stable Market Access', and more. Skills include backend development, blockchain integration, and UI design. Dedicated to creating innovative solutions with an emphasis on clean, efficient code.">
   <title>Yasasvi's portfolio</title>
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    rel="stylesheet" media="all" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="icon" type="image/webp" href="/assets/img/favicon.webp" />
+
+  <link rel="prefetch" type="image/webp" href="/assets/img/favicon-small.webp" as="icon">
+  <link rel="icon" type="image/webp" href="/assets/img/favicon-small.webp" />
 </head>
 
 <body>
@@ -21,7 +27,7 @@
     <div class="logo">
       <a href="/">
         <span class="left"></span>
-        <span style="font-size: 20px">Yasasvi Gumma</span>
+        <span class="logo-txt" style="font-size: 20px">Yasasvi</span>
         <span class="right"></span>
       </a>
     </div>
@@ -48,7 +54,7 @@
             Hi There!<br />I'm a full stack <br />{<span data-value="developer" class="developer"
               style="color: var(--btn-color)">developer</span>}
           </h1>
-          <script src="/assets/js/developer.js"></script>
+          <script defer src="/assets/js/developer.js"></script>
 
           <p style="font-style: italic; font-weight: 500">
             A developer driven by creativity, <br />
@@ -56,7 +62,14 @@
           </p>
 
           <br />
-          <a href="/#contact" class="btn">Let's connect <i class="ti ti-arrow-right"></i></a>
+          <a href="/#contact" class="btn">Let's connect <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M5 12l14 0" />
+              <path d="M13 18l6 -6" />
+              <path d="M13 6l6 6" />
+            </svg></a>
         </div>
         <div>
           <div id="donut" style="
@@ -68,7 +81,7 @@
                 z-index: -1;
                 overflow: clip();
               "></div>
-          <script src="/assets/js/donut.js"></script>
+          <script defer src="/assets/js/donut.js"></script>
         </div>
       </div>
     </section>
@@ -85,13 +98,37 @@
             line-height: 2.3rem;
           ">
         <div>
-          <img src="/assets/img/favicon.webp" alt="profile pic" width="300px" height="300px"
-            style="border-radius: 50%; border: 5px solid white" title="This is my github profile pic" />
+          <img src="/assets/img/favicon.webp " alt="profile pic" width="300px" height="300px" class="blur-load"
+            style="border-radius: 50%; border: 5px solid white; background-image: url(/assets/img/favicon-small.webp);"
+            title="This is my github profile pic" loading="lazy" />
           <div class="about-links">
-            <a href="mailto:contact@yasasvi.site" class="links"><i class="ti ti-mail"></i>Email</a>
-            <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><i
-                class="ti ti-brand-linkedin"></i>Linkedin</a>
-            <a href="https://github.com/MementoMori11723" class="links"><i class="ti ti-brand-github"></i>Github</a>
+            <a href="mailto:contact@yasasvi.site" class="links"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                <path d="M3 7l9 6l9 -6" />
+              </svg>Email</a>
+            <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 11v5" />
+                <path d="M8 8v.01" />
+                <path d="M12 16v-5" />
+                <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+              </svg>Linkedin</a>
+            <a href="https://github.com/MementoMori11723" class="links"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+              </svg>Github</a>
           </div>
         </div>
         <div>
@@ -141,52 +178,232 @@
         </div>
         <div class="left">
           <p>
-            <span> <i class="ti ti-language"></i> Programming Languages</span>
+            <span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-language-hiragana">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 5h7" />
+                <path d="M7 4c0 4.846 0 7 .5 8" />
+                <path
+                  d="M10 8.5c0 2.286 -2 4.5 -3.5 4.5s-2.5 -1.135 -2.5 -2c0 -2 1 -3 3 -3s5 .57 5 2.857c0 1.524 -.667 2.571 -2 3.143" />
+                <path d="M12 20l4 -9l4 9" />
+                <path d="M19.1 18h-6.2" />
+              </svg> Programming Languages</span>
           <div>
             <a href="https://www.python.org/" target="_blank"
-              title="Python is a programming language that is easy to get started with."><i
-                class="ti ti-brand-python"></i>Python</a>
-            <a href="https://www.oracle.com/in/java/" target="_blank"><i class="ti ti-coffee"></i>Java</a>
+              title="Python is a programming language that is easy to get started with."><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-python">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3" />
+                <path d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3" />
+                <path
+                  d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4" />
+                <path d="M11 6l0 .01" />
+                <path d="M13 18l0 .01" />
+              </svg>Python</a>
+            <a href="https://www.oracle.com/in/java/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-coffee">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1" />
+                <path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+                <path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2" />
+                <path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5z" />
+                <path d="M16.746 16.726a3 3 0 1 0 .252 -5.555" />
+              </svg>Java</a>
             <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript"
-              target="_blank"><i class="ti ti-file-type-js"></i>Javascript</a>
-            <a href="https://go.dev/" target="_blank"><i class="ti ti-brand-golang"></i>Golang</a>
-            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><i
-                class="ti ti-hexagon-letter-c"></i>C/C++</a>
+              target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-js">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M3 15h3v4.5a1.5 1.5 0 0 1 -3 0" />
+                <path
+                  d="M9 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" />
+                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-1" />
+              </svg>Javascript</a>
+            <a href="https://go.dev/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-golang">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M15.695 14.305c1.061 1.06 2.953 .888 4.226 -.384c1.272 -1.273 1.444 -3.165 .384 -4.226c-1.061 -1.06 -2.953 -.888 -4.226 .384c-1.272 1.273 -1.444 3.165 -.384 4.226z" />
+                <path
+                  d="M12.68 9.233c-1.084 -.497 -2.545 -.191 -3.591 .846c-1.284 1.273 -1.457 3.165 -.388 4.226c1.07 1.06 2.978 .888 4.261 -.384a3.669 3.669 0 0 0 1.038 -1.921h-2.427" />
+                <path d="M5.5 15h-1.5" />
+                <path d="M6 9h-2" />
+                <path d="M5 12h-3" />
+              </svg>Golang</a>
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-hexagon-letter-c">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+                <path d="M14 10a2 2 0 1 0 -4 0v4a2 2 0 1 0 4 0" />
+              </svg>C/C++</a>
           </div>
           </p>
         </div>
         <div class="right">
           <p>
-            <span> <i class="ti ti-tools"></i> Tools & Frameworks</span>
+            <span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-tools">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+                <path d="M14.5 5.5l4 4" />
+                <path d="M12 8l-5 -5l-4 4l5 5" />
+                <path d="M7 8l-1.5 1.5" />
+                <path d="M16 12l5 5l-4 4l-5 -5" />
+                <path d="M16 17l-1.5 1.5" />
+              </svg> Tools & Frameworks</span>
           <div>
-            <a href="https://react.dev/" target="_blank"><i class="ti ti-brand-react"></i>React</a>
-            <a href="https://flask.palletsprojects.com/en/stable/" target="_blank"><i
-                class="ti ti-brand-python"></i>Flask</a>
-            <a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><i
-                class="ti ti-brand-ansible"></i>Ansible</a>
-            <a href="https://www.terraform.io/" target="_blank"><i class="ti ti-brand-terraform"></i>Terraform</a>
-            <a href="https://render.com/" target="_blank"><i class="ti ti-border-style"></i>Render</a>
-            <a href="https://www.linode.com/" target="_blank"><i class="ti ti-server"></i>Linode</a>
+            <a href="https://react.dev/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-react">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
+                <path
+                  d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
+                <path
+                  d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2" />
+                <path
+                  d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2" />
+                <path
+                  d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896" />
+                <path
+                  d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897" />
+                <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z" />
+              </svg>React</a>
+            <a href="https://flask.palletsprojects.com/en/stable/" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-python">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3" />
+                <path d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3" />
+                <path
+                  d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4" />
+                <path d="M11 6l0 .01" />
+                <path d="M13 18l0 .01" />
+              </svg>Flask</a>
+            <a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-ansible">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M9.647 12.294l6.353 3.706l-4 -9l-4 9" />
+              </svg>Ansible</a>
+            <a href="https://www.terraform.io/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-terraform">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M15 15.5l-11.476 -6.216a1 1 0 0 1 -.524 -.88v-4.054a1.35 1.35 0 0 1 2.03 -1.166l9.97 5.816v10.65a1.35 1.35 0 0 1 -2.03 1.166l-3.474 -2.027a1 1 0 0 1 -.496 -.863v-11.926" />
+                <path d="M15 15.5l5.504 -3.21a1 1 0 0 0 .496 -.864v-3.576a1.35 1.35 0 0 0 -2.03 -1.166l-3.97 2.316" />
+              </svg>Terraform</a>
+            <a href="https://render.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-border-style">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 20v-14a2 2 0 0 1 2 -2h14" />
+                <path d="M20 8v.01" />
+                <path d="M20 12v.01" />
+                <path d="M20 16v.01" />
+                <path d="M8 20v.01" />
+                <path d="M12 20v.01" />
+                <path d="M16 20v.01" />
+                <path d="M20 20v.01" />
+              </svg>Render</a>
+            <a href="https://www.linode.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-server">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                <path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                <path d="M7 8l0 .01" />
+                <path d="M7 16l0 .01" />
+              </svg>Linode</a>
           </div>
           </p>
         </div>
         <div class="left">
           <p>
-            <span> <i class="ti ti-heart"></i> Favorites</span>
+            <span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-heart">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+              </svg> Favorites</span>
           <div>
-            <a href="https://go.dev/" target="_blank"><i class="ti ti-brand-golang"></i>Golang</a>
-            <a href="https://www.markdownguide.org/" target="_blank"><i class="ti ti-markdown"></i>Markdown</a>
-            <a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><i
-                class="ti ti-brand-ansible"></i>Ansible</a>
-            <a href="https://ubuntu.com/" target="_blank"
-              title="It's an operating system that is free and open-source (I use Arch btw)."><i
-                class="ti ti-terminal-2"></i>Linux</a>
-            <a href="https://neovim.io/" target="_blank"><i class="ti ti-terminal"></i>Neovim</a>
+            <a href="https://go.dev/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-golang">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M15.695 14.305c1.061 1.06 2.953 .888 4.226 -.384c1.272 -1.273 1.444 -3.165 .384 -4.226c-1.061 -1.06 -2.953 -.888 -4.226 .384c-1.272 1.273 -1.444 3.165 -.384 4.226z" />
+                <path
+                  d="M12.68 9.233c-1.084 -.497 -2.545 -.191 -3.591 .846c-1.284 1.273 -1.457 3.165 -.388 4.226c1.07 1.06 2.978 .888 4.261 -.384a3.669 3.669 0 0 0 1.038 -1.921h-2.427" />
+                <path d="M5.5 15h-1.5" />
+                <path d="M6 9h-2" />
+                <path d="M5 12h-3" />
+              </svg>Golang</a>
+            <a href="https://www.markdownguide.org/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-markdown">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                <path d="M7 15v-6l2 2l2 -2v6" />
+                <path d="M14 13l2 2l2 -2m-2 2v-6" />
+              </svg>Markdown</a>
+            <a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-ansible">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M9.647 12.294l6.353 3.706l-4 -9l-4 9" />
+              </svg>Ansible</a>
+            <a href="https://en.wikipedia.org/wiki/Linux" target="_blank"
+              title="It's an operating system that is free and open-source (I use Arch btw)."><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-terminal-2">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 9l3 3l-3 3" />
+                <path d="M13 15l3 0" />
+                <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+              </svg>Linux</a>
+            <a href="https://neovim.io/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-terminal">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 7l5 5l-5 5" />
+                <path d="M12 19l7 0" />
+              </svg>Neovim</a>
           </div>
           </p>
         </div>
-        <div class="out-links"><a href="/assets/yasasvi's-certificates.pdf" target="_blank"><i
-              class="ti ti-external-link"></i>View my certificates</a></div>
+        <div class="out-links"><a href="/assets/yasasvi's-certificates.pdf" target="_blank"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+              <path d="M11 13l9 -9" />
+              <path d="M15 4h5v5" />
+            </svg>View my certificates</a></div>
       </div>
     </section>
     <section id="experience">
@@ -196,30 +413,98 @@
         Experience
       </h2>
       <div>
-        <p>Although I am still an undergraduate and have limited formal experience, I am actively building websites and
+        <p>Although I'm still an undergraduate and have limited formal experience, I am actively building websites and
           contributing my skills by working on projects for free to gain hands-on experience and grow my expertise.</p>
         <div class="auto-blur">
           <p>Achivements</p>
           <ol>
-            <li><i class="ti ti-microscope"></i><span>Hands-On Learning</span>: Completed <strong>35+</strong> personal
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-microscope">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 21h14" />
+                <path d="M6 18h2" />
+                <path d="M7 18v3" />
+                <path d="M9 11l3 3l6 -6l-3 -3z" />
+                <path d="M10.5 12.5l-1.5 1.5" />
+                <path d="M17 3l3 3" />
+                <path d="M12 21a6 6 0 0 0 3.715 -10.712" />
+              </svg><span>Hands-On Learning</span>: Completed <strong>35+</strong> personal
               projects to build
               practical skills in development,
               optimization, and user-focused design.</li>
-            <li><i class="ti ti-server"></i><span>Scalable Deployments</span>: Deployed multiple applications on
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-server">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                <path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                <path d="M7 8l0 .01" />
+                <path d="M7 16l0 .01" />
+              </svg><span>Scalable Deployments</span>: Deployed multiple applications on
               <strong>Linode VPS </strong>(1 vCPU, 1 GB RAM, 25 GB storage), optimizing resource usage for high
               efficiency.
             </li>
-            <li><i class="ti ti-brand-docker"></i><span>Container Orchestration</span>: Gained experience with
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-docker">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M22 12.54c-1.804 -.345 -2.701 -1.08 -3.523 -2.94c-.487 .696 -1.102 1.568 -.92 2.4c.028 .238 -.32 1 -.557 1h-14c0 5.208 3.164 7 6.196 7c4.124 .022 7.828 -1.376 9.854 -5c1.146 -.101 2.296 -1.505 2.95 -2.46z" />
+                <path d="M5 10h3v3h-3z" />
+                <path d="M8 10h3v3h-3z" />
+                <path d="M11 10h3v3h-3z" />
+                <path d="M8 7h3v3h-3z" />
+                <path d="M11 7h3v3h-3z" />
+                <path d="M11 4h3v3h-3z" />
+                <path d="M4.571 18c1.5 0 2.047 -.074 2.958 -.78" />
+                <path d="M10 16l0 .01" />
+              </svg><span>Container Orchestration</span>: Gained experience with
               Kubernetes by
               deploying and removing a <strong>cluster</strong>, enhancing troubleshooting and management skills.</li>
-            <li><i class="ti ti-terminal"></i><span>Linux Proficiency</span>: Installed <strong>Arch Linux </strong>the
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-terminal">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 7l5 5l-5 5" />
+                <path d="M12 19l7 0" />
+              </svg><span>Linux Proficiency</span>: Installed <strong>Arch Linux </strong>the
               hard way, building expertise in system configuration and package management.</li>
-            <li><i class="ti ti-code"></i><span>Open Source Impact</span>: Contributed <strong>710+ commits</strong> on
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-code">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M7 8l-4 4l4 4" />
+                <path d="M17 8l4 4l-4 4" />
+                <path d="M14 4l-4 16" />
+              </svg><span>Open Source Impact</span>: Contributed <strong>710+ commits</strong> on
               GitHub, driving collaboration and innovation across various projects.</li>
-            <li><i class="ti ti-world-www"></i><span>Web Development</span>: Built and deployed <strong>free</strong>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-world-www">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+                <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+                <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+                <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+                <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+                <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+                <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+                <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+                <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+              </svg><span>Web Development</span>: Built and deployed <strong>free</strong>
               websites, applying
               real-world practices to sharpen technical expertise and deliver functional solutions.</li>
-            <li><i class="ti ti-automatic-gearbox"></i><span>Streamlined Automation</span>: Used tools like
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-automatic-gearbox">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 17v4h1a2 2 0 1 0 0 -4h-1z" />
+                <path d="M17 11h1.5a1.5 1.5 0 0 0 0 -3h-1.5v5" />
+                <path d="M5 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M5 7v3a1 1 0 0 0 1 1h3v7a1 1 0 0 0 1 1h3" />
+                <path d="M9 11h4" />
+              </svg><span>Streamlined Automation</span>: Used tools like
               <strong>GitHub
                 Actions</strong>, <strong>Ansible</strong> and <strong>Docker</strong> to automate deployments, ensuring
               smooth and reliable
@@ -227,8 +512,15 @@
             </li>
           </ol>
         </div>
-        <div class="out-links"><a href="/assets/yasasvi-gumma.pdf" target="_blank"><i
-              class="ti ti-external-link"></i>View
+        <div class="out-links"><a href="/assets/yasasvi-gumma.pdf" target="_blank"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+              <path d="M11 13l9 -9" />
+              <path d="M15 4h5v5" />
+            </svg>View
             my resume</a></div>
       </div>
     </section>
@@ -240,7 +532,8 @@
       <div>
         <div class="cards">
           <div>
-            <img src="assets/img/echo-flow.webp" alt="Preview of echo-flow website" width="100%" height="40%">
+            <img src="assets/img/echo-flow.webp" alt="Preview of echo-flow website" class="blur-load"
+              style="background-image: url(/assets/img/echo-flow-small.webp);" width="100%" height="40%" loading="lazy">
             <span class="project-title">Echo Flow</span>
             <p>
               <span>AI-powered, real-time voice chatbot providing 24/7 user interaction without login. It responds
@@ -248,31 +541,57 @@
                 using natural language processing. <br><br><strong>Tech Stack</strong>: Go, Open AI API, TTS API, JS,
                 HTML, CSS.</span>
             </p>
-            <a href="https://echo-flow.xyz">Visit the website</a>
+            <a href="https://echo-flow.xyz" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg>Visit the website</a>
           </div>
           <div>
-            <img src="/assets/img/no-preview.png" alt="Preview of Tweet Analysis" width="100%" height="40%">
+            <img src="/assets/img/no-preview.png" alt="Preview of Tweet Analysis" width="100%" height="40%"
+              loading="lazy">
             <span class="project-title">Tweet Analysis</span>
             <p>
               <span>Real-time sentiment analysis of tweets to track social media trends and insights. Uses sentiment
                 analysis to gauge public
                 opinion. <br><br><strong>Tech Stack</strong>: Go, Chromedp, TailwindCSS, HTML, JS.</span>
             </p>
-            <a href="https://github.com/MementoMori11723/tweet-analyser">Visit the website</a>
+            <a href="https://github.com/MementoMori11723/tweet-analyser" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg>Visit the website</a>
           </div>
           <div>
-            <img src="/assets/img/blood-transmutation.webp" alt="Preview of Blood Transmutation" width="100%"
-              height="40%">
+            <img src="/assets/img/blood-transmutation.webp" class="blur-load"
+              style="background-image: url(/assets/img/blood-transmutation-small.webp);"
+              alt="Preview of Blood Transmutation" width="100%" height="40%" loading="lazy">
             <span class="project-title">Blood Transmutation</span>
             <p>
               <span>AI app powered by ChatGPT API to suggest blood type conversion methods, improving compatibility for
                 blood
                 transfusions. <br><br><strong>Tech Stack</strong>: Go, ChatGPT API, HTML, CSS, JS.</span>
             </p>
-            <a href="https://blood-transmutation.yasasvi.site">Visit the website</a>
+            <a href="https://blood-transmutation.yasasvi.site" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg>Visit the website</a>
           </div>
           <div>
-            <img src="/assets/img/no-preview.png" alt="Preview of Bank App" width="100%" height="40%">
+            <img src="/assets/img/no-preview.png" alt="Preview of Bank App" width="100%" height="40%" loading="lazy">
             <span class="project-title">Bank App</span>
             <p>
               <span>A simple CLI app designed to manage personal nances, simulating basic
@@ -280,10 +599,20 @@
                 added convenience.
                 <br><br><strong>Tech Stack</strong>: Go, SQLite.</span>
             </p>
-            <a href="https://github.com/MementoMori11723/Bank-App">Visit the website</a>
+            <a href="https://github.com/MementoMori11723/Bank-App" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg>Visit the website</a>
           </div>
           <div>
-            <img src="/assets/img/c-http.webp" alt="Preview of c-http.site" width="100%" height="40%">
+            <img src="/assets/img/c-http.webp" class="blur-load"
+              style="background-image: url(/assets/img/c-http-small.webp);" alt="Preview of c-http.site" width="100%"
+              height="40%" loading="lazy">
             <span class="project-title">c-http.site</span>
             <p>
               <span>Optimized web server for cloud environments, deployed on Linode VPS with SSH hardening, load
@@ -291,25 +620,49 @@
                 HTTP request handling. <br><br><strong>Tech Stack</strong>: C, Nginx, Docker, Linode VPS, HTML, JS,
                 CSS.</span>
             </p>
-            <a href="https://c-http.site">Visit the website</a>
+            <a href="https://c-http.site" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg>Visit the website</a>
           </div>
           <div>
-            <img src="/assets/img/simple-chat.webp" alt="Preview of Simple Chat" width="100%" height="40%">
+            <img src="/assets/img/simple-chat.webp" class="blur-load"
+              style="background-image: url(/assets/img/simple-chat-small.webp);" alt="Preview of Simple Chat"
+              width="100%" height="40%" loading="lazy">
             <span class="project-title">Simple Chat</span>
             <p>
               <span>A simple chat app using Go and WebSocket with the standard library can be straightforward and
                 powerful. Here's an overview of the architecture, features, and implementation. <br><br><strong>Tech
-                  Stack</strong>: Go.</span>
+                  Stack</strong>: Go, docker.</span>
             </p>
-            <a href="https://simple-chat.yasasvi.site">Visit the website</a>
+            <a href="https://simple-chat.yasasvi.site" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg>Visit the website</a>
           </div>
         </div>
-        <p align="center" style="color: var(--subtxt-color); margin-top: 5%;">Note - that some of these website designs
-          are generated by
+        <p align="center" style="color: var(--subtxt-color); margin-top: 5%;">Note - Some of the website designs
+          were generated by
           ChatGPT</p>
-        <div class="out-links"><a href="https://github.com/MementoMori11723?tab=repositories" target="_blank"><i
-              class="ti ti-external-link"></i>View my
-            github</a></div>
+        <div class="out-links"><a href="https://github.com/MementoMori11723?tab=repositories" target="_blank"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-external-link">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+              <path d="M11 13l9 -9" />
+              <path d="M15 4h5v5" />
+            </svg>View my
+            github for more projects</a></div>
       </div>
     </section>
     <section id="contact">
@@ -340,7 +693,13 @@
               style="height: 85px; width: 100%; box-sizing: border-box;" required></textarea><label
               for="message">Message</label>
           </div>
-          <button type="submit"><i class="ti ti-send"></i> Send</button>
+          <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-send">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 14l11 -11" />
+              <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+            </svg> Send</button>
           <p style="font-size: 1rem; color: var(--subtxt-color); padding-top: 25px;">Powered by formsubmit.co</p>
         </form>
       </div>
@@ -350,10 +709,31 @@
     <p align="center" style="font-size: 1.1rem">Social media links</p>
     <div style="padding-bottom: 10px">
       <div>
-        <a href="mailto:contact@yasasvi.site" class="links"><i class="ti ti-mail"></i>Email</a>
-        <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><i
-            class="ti ti-brand-linkedin"></i>Linkedin</a>
-        <a href="https://github.com/MementoMori11723" class="links"><i class="ti ti-brand-github"></i>Github</a>
+        <a href="mailto:contact@yasasvi.site" class="links"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>Email</a>
+        <a href="https://www.linkedin.com/in/yasasvi-gumma/" class="links"><svg xmlns="http://www.w3.org/2000/svg"
+            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M8 11v5" />
+            <path d="M8 8v.01" />
+            <path d="M12 16v-5" />
+            <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+            <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+          </svg>Linkedin</a>
+        <a href="https://github.com/MementoMori11723" class="links"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+          </svg>Github</a>
       </div>
       <br />
       <p align="center" style="font-size: 1.1rem">Other links</p>
@@ -380,6 +760,6 @@
     </script>
   </footer>
 </body>
-<script src="/assets/js/navbar.js"></script>
+<script defer src="/assets/js/navbar.js"></script>
 
 </html>

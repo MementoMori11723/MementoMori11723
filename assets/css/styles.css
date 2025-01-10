@@ -1,3 +1,80 @@
+body,
+section {
+  flex-direction: column;
+}
+
+body,
+nav {
+  padding: 0;
+  display: flex;
+}
+
+body,
+nav,
+nav>div {
+  display: flex;
+  display: flex;
+}
+
+#donut,
+nav a {
+  font-size: 18px;
+}
+
+.logo,
+a,
+body,
+nav.scrolled a {
+  color: var(--txt-color);
+}
+
+#about .about-links a,
+body {
+  margin: 0;
+}
+
+#donut,
+#skills .left p,
+#skills .right p {
+  font-weight: 700;
+}
+
+#experience>div,
+#skills .data,
+#skills .data .txt>p {
+  text-align: justify;
+}
+
+.cards img,
+img {
+  object-fit: cover;
+}
+
+#about .about-links a,
+#skills .data a,
+.cards>div:hover {
+  border: 1px solid var(--txt-color);
+}
+
+.btn,
+form>button {
+  background-color: inherit;
+  gap: 10px;
+}
+
+.form-input input,
+a,
+body,
+form>button {
+  font-family: Arvo, monospace;
+}
+
+.links,
+a,
+nav a {
+  text-decoration: none;
+}
+
 :root {
   --bg-color: #212121;
   --txt-color: white;
@@ -5,18 +82,9 @@
   --btn-color: #43fa96;
 }
 
+a,
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-body,
-a {
   background-color: var(--bg-color);
-  color: var(--txt-color);
-  font-family: "Arvo", monospace;
 }
 
 h1 {
@@ -25,9 +93,9 @@ h1 {
 
 a {
   font-size: 1.2rem;
-  text-decoration: none;
 }
 
+.links svg,
 a svg {
   width: 18px;
   height: 18px;
@@ -35,7 +103,6 @@ a svg {
 
 img {
   object-position: center;
-  object-fit: cover;
 }
 
 .blur-load {
@@ -48,33 +115,34 @@ img {
 }
 
 nav {
-  padding: 0;
   height: 60px;
-  display: flex;
   align-items: center;
   top: 0;
   position: sticky;
-  display: flex;
   justify-content: space-between;
   width: 100%;
-  transition: background-color 0.01s ease-in-out;
+  transition: background-color 10ms ease-in-out;
 }
 
 nav>div {
-  display: flex;
   align-items: center;
   padding: 0 8px;
 }
 
+.logo,
+.logo>a {
+  justify-content: center;
+  display: flex;
+}
+
+footer>div>div:first-child,
 nav>div:last-child {
   gap: 12px;
 }
 
 nav a {
-  text-decoration: none;
-  font-size: 18px;
   padding: 8px 10px;
-  transition: color 0.01s ease-in-out;
+  transition: color 10ms ease-in-out;
 }
 
 nav.scrolled {
@@ -83,10 +151,11 @@ nav.scrolled {
 }
 
 nav.scrolled a {
-  color: var(--txt-color);
   background-color: inherit;
 }
 
+.btn:active,
+.btn:hover,
 nav a:hover {
   color: var(--bg-color);
   background-color: var(--btn-color);
@@ -94,28 +163,22 @@ nav a:hover {
 
 #donut {
   white-space: pre;
-  font-size: 18px;
   font-family: monospace;
-  font-weight: bold;
   color: var(--btn-color);
 }
 
 .logo {
-  color: var(--txt-color);
-  display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 15rem;
   color: inherit;
 }
 
 .logo>a {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.logo a:hover {
+.logo a:hover,
+.out-links a {
   color: var(--btn-color);
   background-color: var(--bg-color);
 }
@@ -136,27 +199,25 @@ nav a:hover {
 
 .btn {
   border: 1px solid var(--btn-color);
-  background-color: inherit;
   color: inherit;
   margin-top: 5px;
   padding: 8px;
   width: 30%;
-  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.btn:hover,
-.btn:active {
-  color: var(--bg-color);
-  background-color: var(--btn-color);
+#skills .data a svg,
+.about-sub-tag,
+.command,
+.out-links a svg {
+  color: var(--subtxt-color);
 }
 
 section {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   min-height: 500px;
   max-width: 90%;
@@ -177,13 +238,8 @@ section {
   color: var(--btn-color);
 }
 
-.command {
-  color: var(--subtxt-color);
-}
-
 .about-sub-tag {
   font-size: 1.27rem;
-  color: var(--subtxt-color);
 }
 
 #about div {
@@ -197,28 +253,26 @@ section {
   align-items: center;
 }
 
-#about .about-links {
-  display: flex;
+#about .about-links,
+#skills {
   flex-direction: row;
+  display: flex;
+}
+
+#about .about-links {
   margin-top: 40px;
   background-color: var(--bg-color);
   gap: 7px;
   height: 35px;
 }
 
-#about .about-links a {
-  border: 1px solid var(--txt-color);
-  margin: 0;
-}
-
-#about .about-links a:hover {
+#about .about-links a:hover,
+#skills .data a:hover {
   color: var(--bg-color);
   background-color: var(--txt-color);
 }
 
 #skills {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -228,25 +282,17 @@ section {
 #skills .data a {
   text-align: center;
   padding: 5px;
-  margin: 7px;
-  border: 1px solid var(--txt-color);
+  margin: 3px;
 }
 
 #skills .data a svg {
   text-align: center;
   font-size: 1.3rem;
   padding-right: 4px;
-  color: var(--subtxt-color);
-}
-
-#skills .data a:hover {
-  color: var(--bg-color);
-  background-color: var(--txt-color);
 }
 
 #skills .data {
   height: auto;
-  text-align: justify;
   margin-top: 130px;
   width: 90%;
   gap: 30px;
@@ -261,12 +307,10 @@ section {
   flex-wrap: wrap;
 }
 
-#skills .data .txt>p {
-  text-align: justify;
-}
-
 #skills .left,
-#skills .right {
+#skills .right,
+.auto-blur li svg,
+.auto-blur span {
   font-size: 1.8rem;
 }
 
@@ -279,13 +323,9 @@ section {
   margin: 30px 0;
 }
 
-#skills .left p,
-#skills .right p {
-  font-weight: bold;
-}
-
 #skills .left svg,
-#skills .right svg {
+#skills .right svg,
+.auto-blur span {
   color: var(--btn-color);
 }
 
@@ -302,29 +342,33 @@ section {
   top: auto;
 }
 
-.out-links a {
-  color: var(--btn-color);
-  background-color: var(--bg-color);
-}
-
 .out-links a svg {
   border: none;
-  color: var(--subtxt-color);
   padding: 0.2rem;
 }
 
-.out-links a:hover,
-#skills .out-links a:hover {
+#skills .out-links a:hover,
+.out-links a:hover {
   color: var(--btn-color);
   background-color: var(--bg-color);
   text-decoration: underline;
+}
+
+.auto-blur li,
+.auto-blur li svg,
+.cards>div:hover {
+  color: var(--subtxt-color);
+}
+
+.cards>div:hover,
+.links:hover {
+  background-color: var(--txt-color);
 }
 
 #experience>div {
   margin-top: 130px;
   font-size: 1.4rem;
   padding: 30px;
-  text-align: justify;
   line-height: 2.3rem;
 }
 
@@ -344,29 +388,25 @@ section {
 
 .auto-blur li {
   scroll-snap-align: start;
-  animation: autoBlur ease-in-out both;
+  animation: ease-in-out both autoBlur;
   will-change: filter;
   animation-timeline: view();
   margin-top: 22px;
-  color: var(--subtxt-color);
 }
 
-.auto-blur li svg,
-.auto-blur span {
-  font-size: 1.8rem;
-}
-
-.auto-blur span {
-  color: var(--btn-color);
+#projects>div>div:last-child,
+.cards>div {
+  margin-top: 30px;
 }
 
 .auto-blur li svg {
-  color: var(--subtxt-color);
   padding-right: 10px;
 }
 
 @keyframes autoBlur {
-  0% {
+
+  0%,
+  100% {
     filter: blur(8rem);
     color: var(--subtxt-color);
   }
@@ -375,11 +415,6 @@ section {
   40% {
     filter: blur(0px);
     color: var(--txt-color);
-  }
-
-  100% {
-    filter: blur(8rem);
-    color: var(--subtxt-color);
   }
 }
 
@@ -391,12 +426,18 @@ section {
   gap: 20px;
 }
 
-.cards>div {
+#contact div,
+.cards>div,
+.links,
+form,
+form>button {
   display: flex;
+}
+
+.cards>div {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  margin-top: 30px;
   text-align: justify;
   padding: 15px;
   font-size: 1.03rem;
@@ -405,12 +446,14 @@ section {
   position: relative;
 }
 
-.cards img {
-  object-fit: cover;
+.cards a,
+footer {
+  margin-top: auto;
 }
 
 .project-title {
   font-size: 1.1rem;
+  font-style: italic;
   color: var(--btn-color);
   margin: 10px 0;
 }
@@ -420,35 +463,27 @@ section {
 }
 
 .cards>div:hover {
-  background-color: var(--txt-color);
-  color: var(--subtxt-color);
-  border: 1px solid var(--txt-color);
   border-radius: 3px;
   transform: scale(1.1);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .cards a {
   color: var(--btn-color);
   padding: 12px;
-  margin-top: auto;
   text-align: center;
 }
 
-.cards div:hover a {
+.cards div:hover a,
+form>button:hover {
   background-color: var(--btn-color);
   color: var(--bg-color);
-}
-
-#projects>div>div:last-child {
-  margin-top: 30px;
 }
 
 #contact div {
   height: 100%;
   width: 100%;
-  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -456,7 +491,6 @@ section {
 
 form {
   width: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -468,25 +502,16 @@ form {
 }
 
 form>button {
-  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Arvo", monospace;
   font-size: 1.3rem;
-  background-color: inherit;
   color: var(--txt-color);
   border: 2px solid var(--btn-color);
-  outline: none;
+  outline: 0;
   width: auto;
   padding: 25px;
   height: 3rem;
-  gap: 10px;
-}
-
-form>button:hover {
-  background-color: var(--btn-color);
-  color: var(--bg-color);
 }
 
 .form-input {
@@ -509,7 +534,6 @@ form>button:hover {
 
 .form-input input {
   padding-top: 8px;
-  font-family: "Arvo", monospace;
 }
 
 .form-input textarea {
@@ -525,7 +549,13 @@ textarea {
   color: var(--txt-color);
   background-color: transparent;
   border: 1.7px solid var(--subtxt-color);
-  outline: none;
+  outline: 0;
+}
+
+footer,
+footer a {
+  background-color: var(--btn-color);
+  color: var(--bg-color);
 }
 
 .form-input input:focus,
@@ -544,16 +574,11 @@ textarea:focus {
 }
 
 footer {
-  background-color: var(--btn-color);
-  color: var(--bg-color);
   bottom: 0;
-  margin-top: auto;
   width: 100%;
 }
 
 footer a {
-  background-color: var(--btn-color);
-  color: var(--bg-color);
   font-size: 1.08rem;
   text-decoration: underline;
 }
@@ -567,31 +592,16 @@ footer>div>div:last-child {
   gap: 7px;
 }
 
-footer>div>div:first-child {
-  gap: 12px;
-}
-
 .links {
-  display: flex;
   padding: 7px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   border: 1px solid var(--bg-color);
   gap: 5px;
 }
 
-.links:hover {
-  background-color: var(--txt-color);
-}
-
-.links svg {
-  width: 18px;
-  height: 18px;
-}
-
-@media (width <= 400px) {
+@media (width <=400px) {
   #donut {
     display: none;
   }

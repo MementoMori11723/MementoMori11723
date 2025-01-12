@@ -13,7 +13,6 @@ body,
 nav,
 nav>div {
   display: flex;
-  display: flex;
 }
 
 #donut,
@@ -282,7 +281,7 @@ section {
 #skills .data a {
   text-align: center;
   padding: 5px;
-  margin: 3px;
+  margin: 2px;
 }
 
 #skills .data a svg {
@@ -404,15 +403,14 @@ section {
 }
 
 @keyframes autoBlur {
-
   0%,
   100% {
     filter: blur(8rem);
     color: var(--subtxt-color);
   }
 
-  30%,
-  40% {
+  40%,
+  45% {
     filter: blur(0px);
     color: var(--txt-color);
   }
@@ -601,8 +599,12 @@ footer>div>div:last-child {
   gap: 5px;
 }
 
-@media (width <=400px) {
+@media (width <=576px) {
   #donut {
     display: none;
   }
+
+  .logo-txt::after {
+    content: "";
+  } 
 }

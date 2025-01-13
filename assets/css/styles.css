@@ -661,4 +661,8 @@ nav .sidebar {
     display: inline-block;
     margin: 5px;
   }
+
+  footer>div>div:last-child {
+    scale: 0.8;
+  }
 }

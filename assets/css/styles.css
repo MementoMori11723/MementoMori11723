@@ -403,6 +403,7 @@ section {
 }
 
 @keyframes autoBlur {
+
   0%,
   100% {
     filter: blur(8rem);
@@ -599,12 +600,65 @@ footer>div>div:last-child {
   gap: 5px;
 }
 
-@media (width <=576px) {
+nav .sidebar {
+  display: none;
+} 
+
+@media (orientation: portrait) {
+  #home {
+    scale: 0.7;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+
+  h1 {
+    font-size: 4.2rem;
+  }
+
   #donut {
     display: none;
   }
 
   .logo-txt::after {
     content: "";
-  } 
+  }
+
+  nav>div:nth-child(2) {
+    display: none;  
+  }
+
+  nav .sidebar {
+    display: flex;
+  }
+
+  nav .sidebar>div {
+    display: none;
+  }
+
+  #about>div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+  }
+
+  #contact>div {
+    width: max(30rem,100%);
+  }
+
+  #skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #skills .data {
+    width: 100%;
+    text-align: justify;
+  }
+
+  #skills .data a {
+    display: inline-block;
+    margin: 5px;
+  }
 }

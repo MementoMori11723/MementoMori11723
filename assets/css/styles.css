@@ -120,7 +120,9 @@ nav {
   position: sticky;
   justify-content: space-between;
   width: 100%;
+  background-color: transparent;
   transition: background-color 10ms ease-in-out;
+  z-index: 100;
 }
 
 nav>div {
@@ -146,7 +148,6 @@ nav a {
 
 nav.scrolled {
   background-color: color-mix(in srgb, var(--bg-color), var(--txt-color) 5%);
-  z-index: 10;
 }
 
 nav.scrolled a {
@@ -600,9 +601,52 @@ footer>div>div:last-child {
   gap: 5px;
 }
 
-nav .sidebar {
+#home>div {
+  right: 10%;
+  margin-bottom: 50px;
+}
+
+#donut {
+  left: 62%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* Initially hidden */
+  height: 100vh;
+  width: 250px;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+  transition:
+    right 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sidebar.active {
+  right: 0;
+  opacity: 1;
+  z-index: 101;
+  scale: 1.2;
+  visibility: visible;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--txt-color);
+  text-decoration: none;
+  z-index: 9;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .gear {
   display: none;
-} 
+}
 
 @media (orientation: portrait) {
   #home {
@@ -616,24 +660,17 @@ nav .sidebar {
     font-size: 4.2rem;
   }
 
-  #donut {
+  nav>div:nth-child(2) {
     display: none;
   }
 
-  .logo-txt::after {
-    content: "";
-  }
-
-  nav>div:nth-child(2) {
-    display: none;  
+  nav .gear {
+    display: block;
   }
 
   nav .sidebar {
+    z-index: 101;
     display: flex;
-  }
-
-  nav .sidebar>div {
-    display: none;
   }
 
   #about>div {
@@ -643,7 +680,7 @@ nav .sidebar {
   }
 
   #contact>div {
-    width: max(30rem,100%);
+    width: max(30rem, 100%);
   }
 
   #skills {
@@ -664,5 +701,11 @@ nav .sidebar {
 
   footer>div>div:last-child {
     scale: 0.8;
+  }
+}
+
+@media (width <=500px) {
+  #donut {
+    display: none;
   }
 }

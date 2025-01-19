@@ -1,3 +1,10 @@
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body,
 section {
   flex-direction: column;
@@ -293,8 +300,7 @@ section {
 
 #skills .data {
   height: auto;
-  margin-top: 130px;
-  width: 90%;
+  margin-top: 10rem;
   gap: 30px;
 }
 
@@ -383,15 +389,23 @@ section {
   text-align: justify;
   border: 4px dashed var(--btn-color);
   padding: 50px;
-  scroll-snap-type: y mandatory;
 }
 
 .auto-blur li {
-  scroll-snap-align: start;
-  animation: ease-in-out both autoBlur;
-  will-change: filter;
-  animation-timeline: view();
   margin-top: 22px;
+  color: color-mix(in srgb, var(--txt-color), var(--bg-color) 15%);
+  padding: 1.3rem;
+}
+
+@media (hover: hover) {
+  .auto-blur li {
+    filter: blur(0.8rem);
+  }
+
+  .auto-blur li:hover {
+    filter: blur(0);
+    color: color-mix(in srgb, var(--txt-color), var(--bg-color) 15%);
+  }
 }
 
 #projects>div>div:last-child,
@@ -401,21 +415,6 @@ section {
 
 .auto-blur li svg {
   padding-right: 10px;
-}
-
-@keyframes autoBlur {
-
-  0%,
-  100% {
-    filter: blur(8rem);
-    color: var(--subtxt-color);
-  }
-
-  40%,
-  45% {
-    filter: blur(0px);
-    color: var(--txt-color);
-  }
 }
 
 .cards {
@@ -592,6 +591,18 @@ footer>div>div:last-child {
   gap: 7px;
 }
 
+footer #copyright {
+  height: auto;
+  width: 100%;
+  background-color: color-mix(in srgb,
+      var(--btn-color) 95%,
+      var(--txt-color) 30%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  margin-top: 10px;
+}
+
 .links {
   padding: 7px;
   flex-direction: row;
@@ -614,9 +625,8 @@ footer>div>div:last-child {
   position: fixed;
   top: 0;
   right: -250px;
-  /* Initially hidden */
   height: 100vh;
-  width: 250px;
+  width: 10rem;
   background-color: var(--bg-color);
   color: var(--txt-color);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
@@ -653,11 +663,23 @@ nav .gear {
     scale: 0.7;
     justify-content: center;
     align-items: center;
-    text-align: justify;
+    text-align: left;
+    margin-top: -7rem;
+  }
+
+  @media (width <=500px) {
+    #donut {
+      display: none;
+    }
   }
 
   h1 {
     font-size: 4.2rem;
+  }
+
+  #developer {
+    position: absolute;
+    z-index: 3;
   }
 
   nav>div:nth-child(2) {
@@ -676,7 +698,14 @@ nav .gear {
   #about>div {
     display: flex;
     flex-direction: column;
-    margin-top: 7rem;
+  }
+
+  #about>div>div:first-child {
+    margin-top: 10rem;
+  }
+
+  #about>div>div:last-child {
+    margin-top: -7rem;
   }
 
   #contact>div {
@@ -690,22 +719,18 @@ nav .gear {
   }
 
   #skills .data {
-    width: 100%;
+    padding: 10px 0;
+    width: auto;
     text-align: justify;
+    scale: 1.02;
   }
 
   #skills .data a {
     display: inline-block;
-    margin: 5px;
+    margin: 4px;
   }
 
   footer>div>div:last-child {
-    scale: 0.8;
-  }
-}
-
-@media (width <=500px) {
-  #donut {
-    display: none;
+    scale: 0.9;
   }
 }

@@ -690,6 +690,7 @@ nav .gear {
 
   nav .gear {
     display: block;
+    margin-right: 12px;
   }
 
   nav .sidebar {

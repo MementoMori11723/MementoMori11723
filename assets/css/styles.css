@@ -667,14 +667,16 @@ nav .gear {
     margin-top: -7rem;
   }
 
-  @media (width <=500px) {
-    #donut {
-      display: none;
-    }
+  #donut {
+    left: -15%;
+    top: -30%;
+    opacity: 0.47;
+    font-size: 0.95rem;
   }
 
   h1 {
-    font-size: 4.2rem;
+    opacity: 1.7;
+    font-size: 4.5rem;
   }
 
   #developer {

@@ -82,7 +82,7 @@ nav a {
 }
 
 :root {
-  --bg-color: #212121;
+  --bg-color: #1a1a1a;
   --txt-color: white;
   --subtxt-color: gray;
   --btn-color: #43fa96;
@@ -737,3 +737,43 @@ nav .gear {
     scale: 0.9;
   }
 }
+/**/
+/*@media (aspect-ratio: 16/10) {*/
+/*  section {*/
+/*    padding: 120px 28vw;*/
+/*    max-width: 1500px;*/
+/*    margin: 0 auto;*/
+/*    font-size: 1.7rem;*/
+/*  }*/
+/**/
+/*  #donut {*/
+/*    font-size: 2rem;*/
+/*  }*/
+/**/
+/*  h1 {*/
+/*    font-size: 9.55rem;*/
+/*  }*/
+/**/
+/*  .sub-heading {*/
+/*    font-size: 5rem;*/
+/*    margin-top: 70px;*/
+/*  }*/
+/**/
+/*  #about {*/
+/*    font-size: 2rem;*/
+/*  }*/
+/**/
+/*  nav {*/
+/*    padding: 0.7rem 0;*/
+/*  }*/
+/**/
+/*  nav a {*/
+/*    padding-top: 15px;*/
+/*    font-size: 1.7rem;*/
+/*  }*/
+/**/
+/*  .btn {*/
+/*    width: 25%;*/
+/*    padding: 12px;*/
+/*  }*/
+/*}*/

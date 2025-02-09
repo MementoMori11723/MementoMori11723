@@ -3,7 +3,7 @@ main {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  overflow-x: hidden;
   text-rendering: geometricPrecision;
 }
 
@@ -128,7 +128,7 @@ img {
 }
 
 nav {
-  height: 6.2dvh;
+  height: 6.5vh;
   align-items: center;
   top: 0;
   position: sticky;
@@ -501,7 +501,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 6.5vw 7.5vh;
+  margin: 5vw;
   background-color: color-mix(in srgb, var(--txt-color), var(--bg-color) 92%);
   border-radius: 0.3rem;
   padding: 2rem 3rem;
@@ -524,17 +524,17 @@ form>button {
 .form-input {
   width: 100%;
   position: relative;
-  margin: 2.2vh 0;
+  margin: 1rem 0;
 }
 
 .form-input label {
   position: absolute;
   top: 50%;
-  left: 0.6vh;
+  left: 0.4vh;
   transform: translateY(-50%);
   font-size: 1rem;
   color: var(--txt-color);
-  padding: 0 0.5vh;
+  padding: 0 0.2vh;
   pointer-events: none;
   transition: 0.2s;
 }
@@ -551,8 +551,7 @@ form>button {
 textarea {
   width: 100%;
   height: 7vh;
-  font-size: 0.9rem;
-  padding-left: 0.5vh;
+  font-size: 0.8rem;
   color: var(--txt-color);
   background-color: transparent;
   border: 0.125rem solid var(--subtxt-color);
@@ -678,7 +677,7 @@ nav .gear {
   #donut {
     left: -15%;
     top: -30%;
-    opacity: 0.47;
+    opacity: 0.5;
     font-size: 0.95rem;
   }
 
@@ -724,6 +723,7 @@ nav .gear {
   }
 
   #skills {
+    scale: 1.05;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -739,6 +739,11 @@ nav .gear {
   #skills .data a {
     display: inline-block;
     margin: 4px;
+  }
+
+  form {
+    margin-top: 5rem;
+    scale: 0.85;
   }
 
   footer>div>div:last-child {

@@ -2,7 +2,9 @@ main {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow-y: auto;
+  text-rendering: geometricPrecision;
 }
 
 body,
@@ -24,7 +26,7 @@ nav>div {
 
 #donut,
 nav a {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .logo,
@@ -59,13 +61,14 @@ img {
 #about .about-links a,
 #skills .data a,
 .cards>div:hover {
-  border: 1px solid var(--txt-color);
+  border: 0.1rem solid var(--txt-color);
 }
 
 .btn,
 form>button {
+  margin-top: 2rem;
   background-color: inherit;
-  gap: 10px;
+  gap: 0.8rem;
 }
 
 .form-input input,
@@ -103,8 +106,8 @@ a {
 
 .links svg,
 a svg {
-  width: 18px;
-  height: 18px;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 img {
@@ -116,12 +119,16 @@ img {
   background-position: center;
 }
 
+.logo-txt {
+  font-size: 2.5rem;
+}
+
 .logo-txt::after {
   content: " Gumma";
 }
 
 nav {
-  height: 60px;
+  height: 6.2dvh;
   align-items: center;
   top: 0;
   position: sticky;
@@ -134,7 +141,7 @@ nav {
 
 nav>div {
   align-items: center;
-  padding: 0 8px;
+  padding: 0 0.4rem;
 }
 
 .logo,
@@ -145,16 +152,17 @@ nav>div {
 
 footer>div>div:first-child,
 nav>div:last-child {
-  gap: 12px;
+  gap: 1vh;
 }
 
 nav a {
-  padding: 8px 10px;
+  padding: 0.5rem 0.7rem;
   transition: color 10ms ease-in-out;
 }
 
 nav.scrolled {
   background-color: color-mix(in srgb, var(--bg-color), var(--txt-color) 5%);
+  transition: background-color 0.3s ease-in-out;
 }
 
 nav.scrolled a {
@@ -201,14 +209,14 @@ nav a:hover {
 }
 
 .logo>a>span {
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .btn {
-  border: 1px solid var(--btn-color);
+  border: 0.1rem solid var(--btn-color);
   color: inherit;
-  margin-top: 5px;
-  padding: 8px;
+  margin-top: 0.5rem;
+  padding: 0.8rem;
   width: 30%;
   display: flex;
   justify-content: center;
@@ -226,17 +234,17 @@ section {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 500px;
+  min-height: 31.5rem;
   max-width: 90%;
-  padding: 100px 20vw;
+  padding: 10vh 15vw;
 }
 
 .sub-heading {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 30px;
-  margin-top: 50px;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.5rem;
+  margin-top: 6vh;
   font-size: 3rem;
 }
 
@@ -250,7 +258,7 @@ section {
 }
 
 #about div {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 #about div>div:first-child {
@@ -267,10 +275,10 @@ section {
 }
 
 #about .about-links {
-  margin-top: 40px;
+  margin-top: 4vh;
   background-color: var(--bg-color);
-  gap: 7px;
-  height: 35px;
+  gap: 1vh;
+  height: 3.5vh;
 }
 
 #about .about-links a:hover,
@@ -288,20 +296,20 @@ section {
 
 #skills .data a {
   text-align: center;
-  padding: 5px;
-  margin: 2px;
+  padding: 0.6vh;
+  margin: 0.2vh;
 }
 
 #skills .data a svg {
   text-align: center;
   font-size: 1.3rem;
-  padding-right: 4px;
+  padding-right: 0.5vh;
 }
 
 #skills .data {
   height: auto;
   margin-top: 10rem;
-  gap: 30px;
+  gap: 3.5vh;
 }
 
 #skills .data .txt {
@@ -326,7 +334,7 @@ section {
 
 #skills .right {
   text-align: right;
-  margin: 30px 0;
+  margin: 3.5vh 0;
 }
 
 #skills .left svg,
@@ -372,16 +380,16 @@ section {
 }
 
 #experience>div {
-  margin-top: 130px;
+  margin-top: 15vh;
   font-size: 1.4rem;
-  padding: 30px;
+  padding: 3.5vh;
   line-height: 2.3rem;
 }
 
 .auto-blur p {
   text-align: center;
   font-size: 2.5rem;
-  margin: 70px 0;
+  margin: 3.7vw 0;
 }
 
 .auto-blur ol {
@@ -392,7 +400,7 @@ section {
 }
 
 .auto-blur li {
-  margin-top: 22px;
+  margin-top: 2.5vh;
   color: color-mix(in srgb, var(--txt-color), var(--bg-color) 15%);
   padding: 1.3rem;
 }
@@ -410,7 +418,7 @@ section {
 
 #projects>div>div:last-child,
 .cards>div {
-  margin-top: 30px;
+  margin-top: 3.5vh;
 }
 
 .auto-blur li svg {
@@ -418,11 +426,11 @@ section {
 }
 
 .cards {
-  margin-top: 130px;
+  margin-top: 15vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33vh, 1fr));
   justify-content: center;
-  gap: 20px;
+  gap: 2.5vh;
 }
 
 #contact div,
@@ -438,10 +446,10 @@ form>button {
   justify-content: flex-start;
   align-items: stretch;
   text-align: justify;
-  padding: 15px;
+  padding: 1.5rem;
   font-size: 1.03rem;
   line-height: 1.7rem;
-  border: 2px dashed var(--subtxt-color);
+  border: 0.125rem dashed var(--subtxt-color);
   position: relative;
 }
 
@@ -454,7 +462,7 @@ footer {
   font-size: 1.1rem;
   font-style: italic;
   color: var(--btn-color);
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .cards>div:hover .project-title {
@@ -462,7 +470,7 @@ footer {
 }
 
 .cards>div:hover {
-  border-radius: 3px;
+  border-radius: 0.3rem;
   transform: scale(1.1);
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -470,7 +478,7 @@ footer {
 
 .cards a {
   color: var(--btn-color);
-  padding: 12px;
+  padding: 0.5rem;
   text-align: center;
 }
 
@@ -493,7 +501,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 150px 70px;
+  margin: 6.5vw 7.5vh;
   background-color: color-mix(in srgb, var(--txt-color), var(--bg-color) 92%);
   border-radius: 0.3rem;
   padding: 2rem 3rem;
@@ -506,48 +514,48 @@ form>button {
   align-items: center;
   font-size: 1.3rem;
   color: var(--txt-color);
-  border: 2px solid var(--btn-color);
+  border: 0.125rem solid var(--btn-color);
   outline: 0;
   width: auto;
-  padding: 25px;
+  padding: 2.7vh;
   height: 3rem;
 }
 
 .form-input {
   width: 100%;
   position: relative;
-  margin: 20px 0;
+  margin: 2.2vh 0;
 }
 
 .form-input label {
   position: absolute;
   top: 50%;
-  left: 5px;
+  left: 0.6vh;
   transform: translateY(-50%);
   font-size: 1rem;
   color: var(--txt-color);
-  padding: 0 5px;
+  padding: 0 0.5vh;
   pointer-events: none;
   transition: 0.2s;
 }
 
 .form-input input {
-  padding-top: 8px;
+  padding-top: 0.8vh;
 }
 
 .form-input textarea {
-  padding-top: 15px;
+  padding-top: 1.7vh;
 }
 
 .form-input input,
 textarea {
   width: 100%;
-  height: 50px;
+  height: 7vh;
   font-size: 0.9rem;
-  padding-left: 5px;
+  padding-left: 0.5vh;
   color: var(--txt-color);
   background-color: transparent;
-  border: 1.7px solid var(--subtxt-color);
+  border: 0.125rem solid var(--subtxt-color);
   outline: 0;
 }
 
@@ -588,7 +596,7 @@ footer>div>div:last-child {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 7px;
+  gap: 0.7vh;
 }
 
 footer #copyright {
@@ -597,24 +605,24 @@ footer #copyright {
   background-color: color-mix(in srgb,
       var(--btn-color) 95%,
       var(--txt-color) 30%);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 1vh;
 }
 
 .links {
-  padding: 7px;
+  padding: 0.7vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--bg-color);
-  gap: 5px;
+  border: 0.1rem solid var(--bg-color);
+  gap: 1vh;
 }
 
 #home>div {
   right: 10%;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
 }
 
 #donut {
@@ -624,12 +632,12 @@ footer #copyright {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -250px;
+  right: -27vh;
   height: 100vh;
   width: 10rem;
   background-color: var(--bg-color);
   color: var(--txt-color);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: -1vh 0 1vh rgba(0, 0, 0, 0.5);
   transition:
     right 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
@@ -647,7 +655,7 @@ footer #copyright {
 
 .sidebar a {
   display: block;
-  padding: 10px 20px;
+  padding: 1vh 2vh;
   color: var(--txt-color);
   text-decoration: none;
   z-index: 9;
@@ -690,7 +698,7 @@ nav .gear {
 
   nav .gear {
     display: block;
-    margin-right: 12px;
+    margin-right: 1.25vh;
   }
 
   nav .sidebar {
@@ -722,7 +730,7 @@ nav .gear {
   }
 
   #skills .data {
-    padding: 10px 0;
+    padding: 1vh 0;
     width: auto;
     text-align: justify;
     scale: 1.02;
@@ -737,43 +745,13 @@ nav .gear {
     scale: 0.9;
   }
 }
-/**/
-/*@media (aspect-ratio: 16/10) {*/
-/*  section {*/
-/*    padding: 120px 28vw;*/
-/*    max-width: 1500px;*/
-/*    margin: 0 auto;*/
-/*    font-size: 1.7rem;*/
-/*  }*/
-/**/
-/*  #donut {*/
-/*    font-size: 2rem;*/
-/*  }*/
-/**/
-/*  h1 {*/
-/*    font-size: 9.55rem;*/
-/*  }*/
-/**/
-/*  .sub-heading {*/
-/*    font-size: 5rem;*/
-/*    margin-top: 70px;*/
-/*  }*/
-/**/
-/*  #about {*/
-/*    font-size: 2rem;*/
-/*  }*/
-/**/
-/*  nav {*/
-/*    padding: 0.7rem 0;*/
-/*  }*/
-/**/
-/*  nav a {*/
-/*    padding-top: 15px;*/
-/*    font-size: 1.7rem;*/
-/*  }*/
-/**/
-/*  .btn {*/
-/*    width: 25%;*/
-/*    padding: 12px;*/
-/*  }*/
-/*}*/
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+  html {
+    font-size: 170%;
+  }
+  svg {
+    scale: 1.17;
+  }
+}
+

@@ -1,0 +1,11 @@
+---
+- hosts: vps
+  tasks:
+    - name: Pull the latest changes and run the makefile
+      shell: |
+          if [ -d $HOME/MementoMori11723 ]; then
+            git clone https://github.com/MementoMori11723/MementoMori11723.git $HOME/MementoMori11723
+          fi
+          cd $HOME/MementoMori11723 && git pull origin master && make stop && make 
+      args:
+        executable: /bin/bash

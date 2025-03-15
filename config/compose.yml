@@ -1,0 +1,46 @@
+services:
+  reverse-proxy:
+    image: nginx:stable-alpine
+    container_name: reverse-proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    deploy:
+      resources:
+        limits:
+          cpus: "0.01"
+          memory: 30M
+    networks:
+      - deploy_net
+
+  app:
+    build:
+      context: ../
+      dockerfile: config/Dockerfile
+    container_name: yasasvi-site 
+    restart: always
+    working_dir: /app
+    expose:
+      - "11000"
+    networks:
+      - deploy_net 
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-ai
+    expose:
+      - "11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - deploy_net
+    command: "serve"
+
+networks:
+  deploy_net:
+    driver: bridge
+
+volumes:
+  ollama_data:

@@ -13,7 +13,7 @@ services:
           cpus: "0.01"
           memory: 30M
     networks:
-      - deploy_net
+      - net
 
   app:
     build:
@@ -22,10 +22,12 @@ services:
     container_name: yasasvi-site 
     restart: always
     working_dir: /app
+    volumes:
+      - sqlite_dir:/data
     expose:
       - "11000"
     networks:
-      - deploy_net 
+      - net 
 
   ollama:
     image: ollama/ollama:latest
@@ -35,12 +37,13 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     networks:
-      - deploy_net
+      - net
     command: "serve"
 
 networks:
-  deploy_net:
+  net:
     driver: bridge
 
 volumes:
   ollama_data:
+  sqlite_dir:

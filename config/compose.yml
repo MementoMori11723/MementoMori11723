@@ -24,8 +24,6 @@ services:
     working_dir: /app
     volumes:
       - sqlite_dir:/data
-    ports:
-      - "11000:11000"
     expose:
       - "11000"
     networks:
@@ -44,7 +42,7 @@ services:
 
 networks:
   deploy_net:
-    # external: true
+    external: true
 
 volumes:
   ollama_data:

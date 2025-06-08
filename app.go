@@ -1,99 +1,30 @@
 package main
 
 import (
-	"MementoMori11723/middleware"
-	"embed"
+	"MementoMori11723/config"
+	"MementoMori11723/server"
 	"fmt"
-	"html/template"
 	"log/slog"
 	"net/http"
 	"os"
 )
 
-var (
-	//go:embed pages/*
-	files embed.FS
-
-	pages = "pages/"
-
-	indexTmpl  *template.Template
-	errorTmpl  *template.Template
-	thanksTmpl *template.Template
-
-	routes = map[string]http.HandlerFunc{
-		"/":           home,
-		"/thanks":     thanks,
-		"/robots.txt": robot,
-		"/404":        errorPage,
-	}
-)
-
-func init() {
-	indexTmpl = getTemplate("index")
-	errorTmpl = getTemplate("404")
-	thanksTmpl = getTemplate("thanks")
-}
-
-func getTemplate(name string) *template.Template {
-	tmpl, err := template.ParseFS(
-		files, fmt.Sprintf("%s%s.html", pages, name),
-	)
-	if err != nil {
-		slog.Error(err.Error())
-		os.Exit(1)
-	}
-	return tmpl
-}
-
 func main() {
-	mux := http.NewServeMux()
-	mux.Handle("/assets/",
-		middleware.Logger(
-			http.StripPrefix("/assets/",
-				http.FileServer(http.Dir("assets")),
-			),
+	_mux := server.Mux()
+	_port := config.Defaults()
+	_server := http.Server{
+		Addr:    _port,
+		Handler: _mux,
+	}
+	slog.Info(
+		"Starting Server", "url",
+		fmt.Sprintf(
+			"https://localhost%s",
+			_server.Addr,
 		),
 	)
-	for route, handler := range routes {
-		mux.Handle(route, middleware.Logger(
-			handler,
-		))
-	}
-	server := http.Server{
-		Addr:    ":11000",
-		Handler: mux,
-	}
-	slog.Info("Starting Server", "port", server.Addr)
-	if err := server.ListenAndServe(); err != nil {
+	if err := _server.ListenAndServe(); err != nil {
 		slog.Error(err.Error())
 		os.Exit(1)
-	}
-}
-
-func home(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/" {
-		http.Redirect(w, r, "/404", http.StatusFound)
-		return
-	}
-	if err := indexTmpl.Execute(w, nil); err != nil {
-		http.Redirect(w, r, "/404", http.StatusFound)
-
-	}
-}
-
-func thanks(w http.ResponseWriter, r *http.Request) {
-	if err := thanksTmpl.Execute(w, nil); err != nil {
-		http.Redirect(w, r, "/404", http.StatusFound)
-
-	}
-}
-
-func robot(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/assets/robot.txt", http.StatusFound)
-}
-
-func errorPage(w http.ResponseWriter, r *http.Request) {
-	if err := errorTmpl.Execute(w, nil); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
